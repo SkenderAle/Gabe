@@ -1,0 +1,1641 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Cultura & Business - Massimo Gabellone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6; color: #2c3e50;
+            background: linear-gradient(to bottom, rgba(155, 89, 182, 0.02) 0%, rgba(142, 68, 173, 0.015) 50%, rgba(195, 155, 211, 0.01) 100%);
+            min-height: 100vh; font-size: 16px;
+        }
+        .portfolio-container {
+            max-width: 800px; margin: 0 auto; padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(155, 89, 182, 0.08) 0%, rgba(142, 68, 173, 0.06) 25%, rgba(155, 89, 182, 0.05) 50%, rgba(195, 155, 211, 0.04) 75%, rgba(236, 240, 241, 0.03) 100%);
+            border-radius: 12px; box-shadow: 0 8px 32px rgba(155, 89, 182, 0.1);
+        }
+        /* Header Section */
+        .portfolio-header {
+            position: relative;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            padding-top: 38px;
+            border-bottom: 3px solid #9b59b6;
+        }
+
+        .portfolio-images {
+            /* Contenitore per logo, non più necessario con absolute */
+        }
+
+        .portfolio-logo {
+            width: 75px;
+            height: 75px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid #9b59b6;
+            position: absolute;
+            top: -11px;
+            left: 114px;
+            z-index: 10;
+        }
+
+        .portfolio-photo {
+            width: 100px;
+            height: 130px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid #9b59b6;
+            box-shadow: 0 4px 12px rgba(155, 89, 182, 0.2);
+            position: absolute;
+            top: -11px;
+            right: 46px;
+            z-index: 10;
+        }
+
+        .portfolio-title-section {
+            margin-left: 0px;
+            margin-top: 0px;
+            padding-right: 170px;
+        }
+
+        .section-logo {
+            width: 35px;
+            height: 35px;
+            border-radius: 3px;
+            object-fit: cover;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .portfolio-main-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .portfolio-subtitle {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-description {
+            font-size: 16px;
+            color: #495057;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: #6c757d;
+            white-space: nowrap;
+        }
+        .portfolio-section {
+            margin-bottom: 35px; padding-left: 20px; border-left: 3px solid #9b59b6;
+        }
+        .section-title {
+            font-size: 22px; font-weight: 700; color: #2c3e50;
+            margin-bottom: 15px; display: flex; align-items: center;
+        }
+        .section-content {
+            font-size: 15px; line-height: 1.7; color: #495057; margin-bottom: 15px;
+        }
+        .section-content strong { color: #2c3e50; }
+        .projects-grid {
+            display: grid; grid-template-columns: 1fr; gap: 20px; margin: 20px 0;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.7); padding: 20px;
+            border-radius: 8px; border-left: 4px solid #9b59b6;
+        }
+        .project-title {
+            font-size: 17px; font-weight: 600; color: #2c3e50; margin-bottom: 10px;
+        }
+        .project-details {
+            font-size: 14px; line-height: 1.6; color: #495057;
+        }
+        .project-details strong { color: #2c3e50; }
+        .portfolio-list {
+            list-style: none; padding: 0; margin: 15px 0;
+        }
+        .portfolio-list li {
+            padding: 8px 0; padding-left: 25px; position: relative;
+            font-size: 14px; line-height: 1.6; color: #495057;
+        }
+        .portfolio-list li::before {
+            content: '✓'; color: #9b59b6; position: absolute;
+            left: 0; font-weight: bold; font-size: 16px;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .portfolio-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .portfolio-logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .portfolio-photo {
+                width: 120px;
+                height: 150px;
+            }
+
+            .portfolio-main-title {
+                font-size: 24px;
+            }
+
+            .portfolio-subtitle {
+                font-size: 16px;
+            }
+
+            .portfolio-description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-container">
+        <div class="portfolio-header">
+            <div class="portfolio-title-section">
+                <h1 class="portfolio-main-title">MASSIMO GABELLONE</h1>
+                <h2 class="portfolio-subtitle">Strategie Economiche Culturali</h2>
+                <p class="portfolio-description">Trasformare la Cultura in Investimento Redditizio</p>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:info@massimogabellone.com" style="color: #9b59b6; text-decoration: none; font-weight: 500;">info@massimogabellone.com</a> | <strong>Tel:</strong> +355 69 288 2052 | <strong>Web:</strong> <a href="https://www.massimogabellone.com" target="_blank" rel="noopener noreferrer" style="color: #9b59b6; text-decoration: none; font-weight: 500;">www.massimogabellone.com</a></p>
+                </div>
+                <img src="static/images/foto.jpg" alt="Massimo Gabellone" class="portfolio-photo">
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Profilo" class="section-logo">
+                Profilo
+            </h3>
+            <div class="section-content">
+                <p><strong>Consulente strategico specializzato nella trasformazione della cultura da costo a investimento redditizio</strong> con <strong>pluridecennale esperienza</strong> nella creazione di modelli economici sostenibili per progetti culturali. Capacità di generare ROI positivo in settori tradizionalmente considerati non-profit, attraverso approcci innovativi che coniugano eccellenza artistica e performance economica.</p>
+                
+                <p>Expertise in progettazione di partnership pubblico-privato, creazione di ecosistemi culturali che trasformano patrimonio artistico e territoriale in driver di sviluppo economico sostenibile. Track record documentato di progetti che hanno generato milioni di euro di valore economico mantenendo elevati standard qualitativi artistici e culturali.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Highlights" class="section-logo">
+                In Sintesi
+            </h3>
+            
+            <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="project-card">
+                    <h4 class="project-title">Esperienza e Scala Operativa</h4>
+                    <div class="project-details">
+                        • 35.000 artisti coordinati e contrattualizzati<br>
+                        • 1.300+ eventi culturali<br>
+                        • Operatività in 16 paesi<br>
+                        • 80 collaboratori stabili gestiti<br>
+                        • Lunga esperienza in economia culturale e sviluppo territoriale
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Performance Economica</h4>
+                    <div class="project-details">
+                        • €14M+ fondi totali gestiti con rendicontazione certificata<br>
+                        • €1,8M/anno budget progetti principali + €400k/anno auto-generati<br>
+                        • 10 enti fondati e gestiti (non profit, Srl commerciali, enti formativi)<br>
+                        • Pareggi bilancio costanti + turnaround situazioni critiche<br>
+                        • 200k persone movimentate sino al 2019<br>
+                        • 25+ anni relazioni fundraising fondazioni bancarie
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Network e Riconoscimenti</h4>
+                    <div class="project-details">
+                        • 120+ enti pubblici collaboratori nazionali e internazionali compreso Unesco Roma<br>
+                        • Partnership Organismi Internazionali: UNOPS, UNDP, CEI<br>
+                        • Riconoscimento Best Practice Forum WACAP (World Alliance of Cities Against Poverty) UN e Unione Europea<br>
+                        • Premio "Personalità Europea" - Comune di Roma<br>
+                        • Mitteleuropa Orchestra riconosciuta da Confindustria<br>
+                        • 3 norme di legge regionali ottenute (Festival, Orchestra, Istituto Vivaldi)
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Enti Formativi creati/gestiti</h4>
+                    <div class="project-details">
+                        • 4 scuole<br>
+                        • 500 studenti totali formati<br>
+                        • 50 insegnanti coordinati<br>
+                        • €800k budget complessivo gestito<br>
+                        • Pareggio di bilancio costante<br>
+                        • Rette accessibili per famiglie
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Servizi" class="section-logo">
+                Servizi di Consulenza Cultura & Business
+            </h3>
+            
+            <div class="project-description">
+                <p>Servizi strategici per aziende, fondazioni e istituzioni che vogliono integrare cultura nei propri obiettivi business generando valore economico e sociale misurabile. Ogni servizio è supportato da track record documentato di progetti implementati con successo e metodologie testate su scala internazionale.</p>
+            </div>
+
+            <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+                
+                <div class="project-card">
+                    <h4 class="project-title">1. Strategie di Corporate Culture</h4>
+                    <div class="project-details">
+                        <p><strong>Sviluppo identità aziendale culturale e posizionamento brand attraverso la cultura</strong></p>
+                        <p><em>Deliverable e Metodologie:</em></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Analisi identità aziendale e gap culturale esistente</li>
+                            <li>Definizione DNA culturale aziendale coerente con valori e mission</li>
+                            <li>Piano implementazione cultura aziendale interna (formazione, eventi, comunicazione)</li>
+                            <li>Strategia posizionamento brand culturale verso stakeholder esterni</li>
+                            <li>KPI misurabili per monitoraggio impatto cultura su performance aziendale</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">2. Partnership Culturali</h4>
+                    <div class="project-details">
+                        <p><strong>Facilitazione collaborazioni strategiche tra aziende e istituzioni culturali</strong></p>
+                        <p><em>Deliverable e Metodologie:</em></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Identificazione partner culturali coerenti con obiettivi aziendali</li>
+                            <li>Due diligence istituzionale e artistica partner potenziali</li>
+                            <li>Negoziazione accordi win-win tra mondo business e culturale</li>
+                            <li>Strutturazione partnership con governance chiara e KPI condivisi</li>
+                            <li>Gestione operativa collaborazioni e reporting performance</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">3. Responsabilità Sociale d'Impresa (CSR Culturale)</h4>
+                    <div class="project-details">
+                        <p><strong>Progettazione e implementazione progetti CSR a impatto culturale misurabile</strong></p>
+                        <p><em>Deliverable e Metodologie:</em></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Analisi stakeholder territoriali e identificazione bisogni culturali</li>
+                            <li>Design progetti CSR allineati con valori aziendali e SDGs</li>
+                            <li>Piano sostenibilità economica e modello funding multi-fonte</li>
+                            <li>Sistema misurazione impatto sociale e territoriale</li>
+                            <li>Comunicazione CSR verso stakeholder e media con storytelling efficace</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">4. Eventi Corporate Culturali</h4>
+                    <div class="project-details">
+                        <p><strong>Progettazione ed esecuzione eventi culturali di alto livello per obiettivi aziendali</strong></p>
+                        <p><em>Deliverable e Metodologie:</em></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Concept eventi culturali customizzati su brand e target aziendale</li>
+                            <li>Coordinamento artistico e logistico con gestione end-to-end</li>
+                            <li>Format replicabili per eventi ricorrenti (concerti, mostre, performance)</li>
+                            <li>Team building culturale innovativo per engagement dipendenti</li>
+                            <li>Networking events per clienti premium in contesti culturali esclusivi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">5. Sponsorizzazioni Strategiche</h4>
+                    <div class="project-details">
+                        <p><strong>Consulenza investimenti culturali mirati per massimizzare ROI reputazionale</strong></p>
+                        <p><em>Deliverable e Metodologie:</em></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Analisi portfolio opportunità sponsorizzazione culturale sul territorio</li>
+                            <li>Valutazione ROI reputazionale e visibilità media per ogni opportunità</li>
+                            <li>Negoziazione accordi sponsorizzazione con istituzioni culturali</li>
+                            <li>Piano attivazione sponsorizzazione per massimizzare brand exposure</li>
+                            <li>Misurazione impatto e reporting risultati quantitativi/qualitativi</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">6. Formazione Manageriale Culturale</h4>
+                    <div class="project-details">
+                        <p><strong>Capacity building per manager che operano all'intersezione cultura-business</strong></p>
+                        <p><em>Deliverable e Metodologie:</em></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Workshop sostenibilità economica culturale e modelli business innovativi</li>
+                            <li>Formazione europrogettazione applicata per aziende e associazioni di categoria</li>
+                            <li>Executive education su leadership culturale e gestione progetti complessi</li>
+                            <li>Masterclass marketing territoriale e valorizzazione patrimonio</li>
+                            <li>Coaching individuale per manager culturali su sfide specifiche</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">7. Marketing Culturale</h4>
+                    <div class="project-details">
+                        <p><strong>Brand positioning territoriale e aziendale attraverso strategie culturali integrate</strong></p>
+                        <p><em>Deliverable e Metodologie:</em></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Audit brand territoriale e identificazione asset culturali sottoutilizzati</li>
+                            <li>Strategia posizionamento brand attraverso cultura (destination branding)</li>
+                            <li>Piano marketing integrato: eventi culturali, comunicazione, PR, digital</li>
+                            <li>Creazione prodotti turistici culturali tematici per attrazione flussi</li>
+                            <li>Misurazione ROI territoriale e visibilità mediatica generata</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">8. Progettazione Europea Business</h4>
+                    <div class="project-details">
+                        <p><strong>Grant writing e implementazione fondi UE per aziende e associazioni di categoria</strong></p>
+                        <p><em>Deliverable e Metodologie:</em></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Scouting bandi UE compatibili con obiettivi aziendali (HORIZON, Creative Europe, altri)</li>
+                            <li>Concept note e grant writing professionale con track record approvazioni</li>
+                            <li>Costruzione partenariati transnazionali per consorzi competitivi</li>
+                            <li>Project management implementazione progetti con rendicontazione certificata</li>
+                            <li>Formazione interna aziendale su accesso fondi diretti e indiretti UE</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Competenze" class="section-logo">
+                Competenze Business Culturali
+            </h3>
+            
+            <div class="section-content">
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Economia Culturale</h4>
+                <ul class="portfolio-list">
+                    <li>Trasformazione patrimonio artistico in asset economici</li>
+                    <li>Creazione modelli business sostenibili per cultura</li>
+                    <li>Analisi costi-benefici progetti culturali</li>
+                    <li>Sviluppo strategie revenue generation</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Marketing Territoriale</h4>
+                <ul class="portfolio-list">
+                    <li>Creazione di Brand Tematici Turistici locali e transnazionali costituiti da Patrimoni Culturali comuni (esempio: mosaici antichi, patrimonio etnico musicale comune, etc.)</li>
+                    <li>Valorizzazione brand territoriale attraverso cultura</li>
+                    <li>Strategie di attrazione turistica culturale</li>
+                    <li>Partenariati pubblico-privato innovativi</li>
+                    <li>Creazione ecosistemi culturali autosufficienti</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Partnership Strategiche</h4>
+                <ul class="portfolio-list">
+                    <li>Facilitazione accordi bilaterali e multilaterali</li>
+                    <li>Costruzione reti istituzionali durature (120+ enti collaboratori)</li>
+                    <li>Gestione progetti complessi multi-stakeholder</li>
+                    <li>Mediazione interculturale per business in 8 paesi europei</li>
+                    <li>Negoziazione win-win tra pubblico e privato</li>
+                    <li>Relazioni con organismi internazionali UN</li>
+                </ul>
+
+                <h4 style="margin-top: 1.5rem; margin-bottom: 0.5rem; color: #2c3e50; font-size: 1.1em;">Fundraising e Sviluppo Risorse</h4>
+                <ul class="portfolio-list">
+                    <li>Fundraising multi-fonte per progetti complessi</li>
+                    <li>Diversificazione fonti finanziamento (pubblico-privato-UE)</li>
+                    <li>Relazioni fondazioni bancarie</li>
+                    <li>Sponsorship management con Confindustria e corporate</li>
+                    <li>Grant writing professionale</li>
+                    <li>Costruzione sostenibilità economica long-term</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Competenze" class="section-logo">
+                Competenze Giuridiche, Economiche, Creative Direction
+            </h3>
+            
+            <div class="project-description">
+                <p>Competenze giuridiche ed economiche approfondite acquisite attraverso gestione diretta. Effettuato: gestione di decine di migliaia di contratti artistici, turnaround di istituzioni in crisi, fondazione e governance di multiple entità giuridiche, e la gestione multimilionaria di fondi con rendicontazione certificata. Coniugazione di eccellenza artistica con solida preparazione legale-economica applicata al settore culturale.</p>
+            </div>
+
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h4 class="project-title">Diritto del Lavoro e Contrattualistica</h4>
+                <div class="project-details">
+                    <ul style="margin-top: 0.5rem;">
+                        <li>35.000 contratti artistici redatti e gestiti (nazionali e internazionali)</li>
+                        <li>Media ~100 contratti/anno per oltre 20 anni di attività continuativa</li>
+                        <li>Contratti orchestrali e staff stabili (55 dipendenti)</li>
+                        <li>Contratti a progetto per artisti freelance, solisti, direttori d'orchestra</li>
+                        <li>Contrattualistica internazionale per 16 paesi europei ed extra Ue</li>
+                        <li>Gestione CCNL Teatri e applicazione normative specifiche</li>
+                        <li>Contratti docenza per 50 insegnanti scuole di musica</li>
+                        <li>Coordinamento 80 dipendenti e collaboratori stabili</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h4 class="project-title">Diritto Sindacale e Relazioni Industriali</h4>
+                <div class="project-details">
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Transazioni sindacali complesse: Turnaround Istituto Vivaldi con gestione €80k debiti e negoziazione sindacale per ristrutturazione passivo</li>
+                        <li>Relazioni sindacali continuative per Orchestra Mitteleuropa</li>
+                        <li>Applicazione contrattazione collettiva settore culturale e spettacolo</li>
+                        <li>Gestione contenziosi e prevenzione dispute lavorative</li>
+                        <li>Negoziazione condizioni economiche compatibili con sostenibilità organizzativa</li>
+                        <li>Mediazione tra esigenze artistiche e vincoli contrattuali</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h4 class="project-title">Diritto Societario e Governance</h4>
+                <div class="project-details">
+                    <ul style="margin-top: 0.5rem;">
+                        <li>10 enti fondati/ gestiti non profit e Srl commerciali</li>
+                        <li>Costituzione associazioni culturali</li>
+                        <li>Governance organizzativa per entità non-profit complesse</li>
+                        <li>Statuti, regolamenti interni, organi sociali</li>
+                        <li>Compliance normativa enti non commerciali e culturali</li>
+                        <li>Rapporti contrattuali con enti pubblici e privati</li>
+                        <li>Gestione trasformazioni e ristrutturazioni organizzative</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h4 class="project-title">Economia e Contabilità Applicata</h4>
+                <div class="project-details">
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Budget planning e controllo</li>
+                        <li>Contabilità e rendicontazione fino al secondo livello progetti europei, altri fondi internazionali, fondi nazionali</li>
+                        <li>Business plan per sostenibilità economica progetti culturali</li>
+                        <li>Analisi costi-benefici e ROI territoriale</li>
+                        <li>Gestione tesoreria e cash flow per organizzazioni complesse</li>
+                        <li>Rendicontazione multi-stakeholder (enti pubblici, privati, UE)</li>
+                        <li>Pricing strategy per concerti e servizi culturali</li>
+                        <li>Modelli economici innovativi per settore tradizionalmente non-profit</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h4 class="project-title">Fiscalità e Previdenza</h4>
+                <div class="project-details">
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Fiscalità artisti nazionali e internazionali (ritenute, certificazioni)</li>
+                        <li>Previdenza musicisti e personale artistico (ENPALS, contributi)</li>
+                        <li>Gestione pagamenti transfrontalieri per artisti 8 paesi europei</li>
+                        <li>Coordinamento aspetti fiscali progetti multi-paese</li>
+                        <li>Compliance normative fiscali settore spettacolo</li>
+                        <li>Gestione F24, dichiarazioni, certificazioni uniche</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h4 class="project-title">Job Act e Continuità Aziendale</h4>
+                <div class="project-details">
+                    <ul style="margin-top: 0.5rem;">
+                        <li><strong>Problema:</strong> Decine orchestrali tempo determinato con diritto acquisito tempo indeterminato</li>
+                        <li><strong>Soluzione:</strong> Audizioni pubbliche + liste sindacali + assunzioni Job Act</li>
+                        <li><strong>Risultato:</strong> Stabilizzazione orchestrali + risparmio €100k/anno</li>
+                        <li><strong>Processo:</strong> Verbali istituzionali Regione FVG, trasparenza totale, zero contenziosi</li>
+                        <li><strong>ROI:</strong> Risparmio reinvestito in promozione → €300k/anno vendite generate</li>
+                        <li><strong>Strategia pricing:</strong> Aumento progressivo prezzi concerti per sostenibilità post-Job Act</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h4 class="project-title">Legge Inclusione e Accessibilità</h4>
+                <div class="project-details">
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Inclusione lavorativa portatori di disabilità in organizzazioni culturali</li>
+                        <li>Normative accessibilità eventi e spettacoli pubblici</li>
+                        <li>Gestione sicurezza sul lavoro per eventi e manifestazioni</li>
+                        <li>Compliance normative allestimenti e sicurezza pubblico</li>
+                        <li>Applicazione leggi inclusione sociale in progetti culturali</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h4 class="project-title">Creative Direction</h4>
+                <div class="project-details">
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Direzione artistica e visione creativa progetti culturali</li>
+                        <li>Coordinamento team creativi multidisciplinari</li>
+                        <li>Brand identity e storytelling per festival e eventi</li>
+                        <li>Cura editoriale pubblicazioni e materiali comunicazione</li>
+                        <li>Concept development per progetti innovativi cultura-territorio</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Competenze Trasversali" class="section-logo">
+                Competenze Trasversali
+            </h3>
+            
+            <div class="section-content">
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Leadership e Management</h4>
+                <ul class="portfolio-list">
+                    <li>Gestione team multidisciplinari internazionali</li>
+                    <li>Coordinamento progetti complessi multi-stakeholder con budget milionari</li>
+                    <li>Direzione artistica e amministrativa di organizzazioni culturali</li>
+                    <li>Capacità decisionale strategica in contesti complessi e dinamici</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Negoziazione e Relazioni Istituzionali</h4>
+                <ul class="portfolio-list">
+                    <li>Negoziazione accordi enti pubblici e privati</li>
+                    <li>Facilitazione partnership bilaterali e multilaterali</li>
+                    <li>Gestione relazioni con organismi internazionali</li>
+                    <li>Mediazione interculturale in contesti istituzionali complessi</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Comunicazione e Public Speaking</h4>
+                <ul class="portfolio-list">
+                    <li>Presentazioni internazionali a conferenze e workshop</li>
+                    <li>Comunicazione efficace con stakeholder diversificati</li>
+                    <li>Capacità di tradurre concetti complessi in messaggi comprensibili</li>
+                    <li>Pubblicazioni e documentazione tecnica per progetti europei</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Problem Solving e Innovazione</h4>
+                <ul class="portfolio-list">
+                    <li>Creazione modelli economici innovativi per settore culturale tradizionalmente non-profit</li>
+                    <li>Trasformazione di vincoli in opportunità (cultura da costo a investimento)</li>
+                    <li>Approccio sistemico a problemi complessi multi-dimensionali</li>
+                    <li>Capacità di anticipare tendenze e adattare strategie</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Gestione del Cambiamento</h4>
+                <ul class="portfolio-list">
+                    <li>Trasformazione organizzativa di enti culturali verso sostenibilità economica</li>
+                    <li>Facilitazione processi di cambiamento in contesti resistenti all'innovazione</li>
+                    <li>Costruzione consenso tra stakeholder con interessi diversi</li>
+                    <li>Adattamento strategico a contesti politici e economici in evoluzione</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Competenze Interculturali</h4>
+                <ul class="portfolio-list">
+                    <li>Esperienza diretta di lavoro in contesti internazionali</li>
+                    <li>Comprensione dinamiche politiche, economiche e culturali dei Balcani Occidentali</li>
+                    <li>Capacità di costruire ponti tra culture e sistemi amministrativi diversi</li>
+                    <li>Sensibilità alle differenze culturali e adattamento comunicativo</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Resilienza e Visione di Lungo Periodo</h4>
+                <ul class="portfolio-list">
+                    <li>Continuità gestionale</li>
+                    <li>Capacità di mantenere focus strategico in contesti di incertezza</li>
+                    <li>Gestione crisi e superamento ostacoli burocratici complessi</li>
+                    <li>Visione di lungo periodo con risultati sostenibili e legacy duratura</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Incarichi" class="section-logo">
+                Gestione Fondi Europei per Enti Pubblici
+            </h3>
+            
+            <div class="project-description">
+                <p>Consulenza strategica per enti pubblici nella gestione di fondi europei con focus su <strong>sostenibilità economica, business planning e marketing territoriale culturale</strong>. Esperienza documentata nell'implementazione di progetti IPA per amministrazioni pubbliche balcaniche.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4 class="project-title">Progetto FAME - Comune di Tirana (Albania) - 2022</h4>
+                    <div class="project-details">
+                        <p><strong>Programma:</strong> IPA CBC SEA (South East Adriatic) - Programma Europeo di Cooperazione Transfrontaliera</p>
+                        <p><strong>Beneficiario:</strong> Municipio di Tirana - Gestione contributi europei assegnati</p>
+                        <p><strong>Periodo:</strong> Consulenza pluriennale</p>
+                        <p><strong>Ruolo:</strong> Esperto consulente per individuazione best practices europee e sviluppo piano di sostenibilità economica</p>
+                        
+                        <p style="margin-top: 1rem;"><strong>Obiettivi Progetto:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Supporto al Comune di Tirana nella gestione efficace di contributi europei IPA</li>
+                            <li>Individuazione e analisi best practices europee in gestione culturale sostenibile</li>
+                            <li>Sviluppo business plan per sostenibilità economica post-finanziamento</li>
+                            <li>Strategie marketing territoriale culturale per valorizzazione patrimonio</li>
+                            <li>Modelli revenue generation per progetti culturali municipali</li>
+                        </ul>
+                        
+                        <p style="margin-top: 1rem;"><strong>Deliverable Forniti:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li><strong>Ricerca best practices:</strong> Mappatura e analisi casi di successo europei in gestione culturale sostenibile</li>
+                            <li><strong>Business plan sostenibilità:</strong> Modello economico-finanziario per autonomia post-progetto</li>
+                            <li><strong>Piano marketing territoriale:</strong> Strategie posizionamento brand culturale città</li>
+                            <li><strong>Strategie revenue generation:</strong> Fonti di entrata diversificate (pubblico-privato-ticketing-sponsorship)</li>
+                            <li><strong>Formazione staff municipale:</strong> Capacity building su gestione progetti culturali sostenibili</li>
+                        </ul>
+                        
+                        <p style="margin-top: 1rem;"><strong>Metodologia Applicata:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Analisi contesto territoriale e assessment risorse culturali sottoutilizzate</li>
+                            <li>Benchmarking con città europee comparabili</li>
+                            <li>Co-progettazione partecipata con stakeholder locali</li>
+                            <li>Modelli finanziari adattati a contesto balcanico in transizione</li>
+                            <li>KPI misurabili per monitoraggio impatto economico e sociale</li>
+                        </ul>
+                        
+                        <p style="margin-top: 1rem; font-style: italic;">Competenza immediatamente trasferibile ad altri enti pubblici per gestione fondi europei, sviluppo sostenibilità economica culturale e capacity building amministrativo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Competenze UE" class="section-logo">
+                Competenze Programmi Europei
+            </h3>
+            
+            <div class="project-description">
+                <p>Conoscenza approfondita dei principali programmi di finanziamento europei acquisita attraverso gestione diretta di progetti finanziati. Europrogettazione, grant writing e gestione progetti complessi multi-paese.</p>
+            </div>
+
+            <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="project-card">
+                    <h4 class="project-title">IPA CBC</h4>
+                    <div class="project-details">
+                        IPA CBC SEA (South East Adriatic)<br>
+                        IPA Albania Grecia<br>
+                        IPA Albania Montenegro<br>
+                        Altri IPA CBC Balcani Occidentali
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">HORIZON - Ricerca e Innovazione</h4>
+                    <div class="project-details">
+                        Programma quadro ricerca europea<br>
+                        Meccanismi finanziamento R&I<br>
+                        Gestione progetti ricerca<br>
+                        Coordinamento consorzi internazionali
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">CREATIVE EUROPE</h4>
+                    <div class="project-details">
+                        Programma cultura e audiovisivo UE<br>
+                        Progetti culturali transnazionali<br>
+                        Partnership settore culturale<br>
+                        Valorizzazione patrimonio artistico
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">CERV - Citizens, Equality, Rights and Values</h4>
+                    <div class="project-details">
+                        Programma cittadinanza, uguaglianza, diritti e valori europei<br>
+                        Progetti memoria europea comune<br>
+                        Partecipazione civica democratica<br>
+                        Cooperazione gemellaggio città
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">INTERREG</h4>
+                    <div class="project-details">
+                        Programma cooperazione territoriale europea<br>
+                        Progetti transfrontalieri in Paesi UE<br>
+                        Sviluppo integrato aree di confine<br>
+                        Partenariati cross-border regionali
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">FSE - Fondo Sociale Europeo</h4>
+                    <div class="project-details">
+                        Programma sviluppo regionale Paesi UE<br>
+                        Formazione professionale e occupazione<br>
+                        Inclusione sociale e capacity building<br>
+                        Progetti competenze e capitale umano
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card" style="margin-top: 2rem;">
+                <h4 class="project-title">Track Record - 13 Progetti su Fondi Internazionali Vinti e Implementati</h4>
+                <div class="project-details">
+                    <p style="margin-bottom: 1rem;"><strong>Progetti INTERREG e FSE:</strong></p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li><strong>INTERREG Italia-Slovenia - ECHOS - Echi Transfrontalieri (2010-2013):</strong><br>
+                        <strong>Programma:</strong> INTERREG - Cooperazione Transfrontaliera<br>
+                        <strong>Partner:</strong> Italia-Slovenia<br>
+                        <strong>Ruolo:</strong> Ideatore, progettista e coordinatore esecutivo<br>
+                        <strong>Obiettivo:</strong> integrazione culturale accademica transfrontaliera</li>
+                        
+                        <li style="margin-top: 1rem;"><strong>INTERREG IIIA Adriatico (2004-2008):</strong><br>
+                        <strong>Programma:</strong> INTERREG IIIA - Cooperazione Transfrontaliera Multilaterale<br>
+                        <strong>Partner:</strong> 8 paesi (Italia, Slovenia, Croazia, Serbia, Bosnia-Erzegovina, Montenegro, Albania, Austria)<br>
+                        <strong>Ruolo:</strong> Ideatore, progettista e coordinatore esecutivo<br>
+                        <strong>Risultati:</strong> Festival "Nei Suoni dei Luoghi" transfrontaliero, valorizzazione patrimonio culturale, 120+ enti coinvolti<br>
+                        <strong>Note:</strong> Estensione richiesta dal Lead Partner Regione Friuli Venezia Giulia al Veneto per successo implementazione</li>
+                        
+                        <li style="margin-top: 1rem;"><strong>INTERREG Italia-Slovenia (2002-2004):</strong><br>
+                        <strong>Programma:</strong> INTERREG - Cooperazione Transfrontaliera<br>
+                        <strong>Partner:</strong> Italia-Slovenia<br>
+                        <strong>Ruolo:</strong> Ideatore, progettista e coordinatore esecutivo<br>
+                        <strong>Obiettivo:</strong> "Nei Suoni dei Luoghi" transfrontaliero, sviluppo culturale territoriale</li>
+                        
+                        <li style="margin-top: 1rem;"><strong>FSE Friuli Venezia Giulia (1998-1999) - 2 progetti:</strong><br>
+                        <strong>Programma:</strong> Fondo Sociale Europeo<br>
+                        <strong>Obiettivo:</strong> Formazione professionale orchestrale<br>
+                        <strong>Ruolo:</strong> Ideatore, progettista e coordinatore esecutivo<br>
+                        <strong>Risultati:</strong> 44 professori d'orchestra formati, professionalizzazione musicale regionale Friuli Venezia Giulia</li>
+                    </ul>
+                    
+                    <p style="margin-top: 1.5rem; margin-bottom: 1rem;"><strong>Fondi Internazionali CEI:</strong></p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li><strong>Programmi CEI - Central European Initiative:</strong> Progetti culturali transfrontalieri finanziati da Ministero Esteri Italiano e Austriaco - Ideatore, progettista e coordinatore esecutivo</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Competenze Digitali" class="section-logo">
+                Competenze Tecniche e Digitali
+            </h3>
+            
+            <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="project-card">
+                    <h4 class="project-title">Produttività e Office Suite</h4>
+                    <div class="project-details">
+                        <strong>Microsoft Office Avanzato</strong><br>
+                        • Word: documenti complessi e report professionali<br>
+                        • Excel: analisi dati, budget, modelli finanziari<br>
+                        • PowerPoint: presentazioni executive e pitch<br>
+                        • Access: gestione database progetti
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Sistemi e Comunicazione</h4>
+                    <div class="project-details">
+                        <strong>Ambienti Multi-Piattaforma</strong><br>
+                        • Sistemi operativi: Mac OS, Windows<br>
+                        • Client email: Mail, Outlook<br>
+                        • Cloud storage: Google Drive, strumenti collaborativi<br>
+                        • Workflow integrati multi-dispositivo
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Intelligenza Artificiale</h4>
+                    <div class="project-details">
+                        <strong>AI Tools per Business e Ricerca</strong><br>
+                        • Claude: analisi strategica e problem solving<br>
+                        • Perplexity: ricerca e intelligence gathering<br>
+                        • Cursor: ottimizzazione workflow digitali<br>
+                        • AI generativa: creazione contenuti, documentazione<br>
+                        • Altri strumenti AI per produttività e analisi
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Digital Communication</h4>
+                    <div class="project-details">
+                        <strong>Social Network e Web</strong><br>
+                        • Gestione social media professionali<br>
+                        • Comunicazione digitale integrata<br>
+                        • Strumenti di navigazione e ricerca web avanzata<br>
+                        • Online reputation management
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Competenze Linguistiche" class="section-logo">
+                Competenze Linguistiche
+            </h3>
+            
+            <div class="section-content">
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Italiano: Madrelingua (C2)</h4>
+                <ul class="portfolio-list">
+                    <li>Comunicazione nativa professionale ad alto livello</li>
+                    <li>Redazione documentazione tecnica e istituzionale complessa</li>
+                    <li>Presentazioni pubbliche e negoziazioni in contesti formali</li>
+                    <li>Capacità di sintesi e chiarezza espositiva in ambito business</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Inglese: Avanzato (C1)</h4>
+                <ul class="portfolio-list">
+                    <li>Comunicazione professionale fluente in contesti internazionali</li>
+                    <li>Presentazioni internazionali e negoziazioni con stakeholder esteri</li>
+                    <li>Redazione grant applications, concept notes e report per programmi UE</li>
+                    <li>Gestione relazioni con organismi internazionali (UNESCO, UNDP, UNOPS, CEI)</li>
+                    <li>Partecipazione attiva a conferenze e workshop internazionali</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Formazione" class="section-logo">
+                Formazione Interdisciplinare
+            </h3>
+            <div class="section-content">
+                <p>La formazione musicale è arricchita da profondi interessi culturali e scientifici che contribuiscono alla visione strategica complessiva e alla capacità di comprendere dinamiche complesse. Approccio multidisciplinare che integra umanesimo, scienza e innovazione per soluzioni business culturali innovative.</p>
+            </div>
+
+            <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="project-card">
+                    <h4 class="project-title">Studi Umanistici</h4>
+                    <div class="project-details">
+                        <strong>Storia • Filosofia • Letteratura</strong><br>
+                        Approfondimento dei contesti storici e filosofici che hanno dato origine ai patrimoni culturali. Studio delle correnti letterarie e filosofiche, dalla filosofia illuminista alle correnti romantiche e post-romantiche. Comprensione profonda del valore culturale come base per la valorizzazione economica.
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h4 class="project-title">Psicologia Organizzativa e Interculturale</h4>
+                    <div class="project-details">
+                        <strong>Comunicazione • Organizzazioni • Cooperazione Internazionale</strong><br>
+                        Studio degli aspetti psicologici e cognitivi della comunicazione e dell'organizzazione, con attenzione ai bisogni socio-sanitari delle comunità. Interesse per i meccanismi alla base della cooperazione interculturale e della costruzione di reti di fiducia tra partner internazionali.
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h4 class="project-title">Economia e Politiche Globali</h4>
+                    <div class="project-details">
+                        <strong>Economia • Finanza • Politiche Internazionali</strong><br>
+                        Comprensione approfondita delle dinamiche economiche e finanziarie internazionali, con particolare focus sui Balcani Occidentali. Studio delle politiche culturali, meccanismi di finanziamento pubblico-privato e strumenti di sviluppo territoriale sostenibile.
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h4 class="project-title">Innovazione Tecnologica</h4>
+                    <div class="project-details">
+                        <strong>Intelligenza Artificiale • Scienza</strong><br>
+                        Interesse per l'evoluzione tecnologica e le sue applicazioni nel campo culturale e business. Studio dell'impatto dell'intelligenza artificiale sui processi di valorizzazione culturale, marketing territoriale e ottimizzazione gestionale.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Consulenza" class="section-logo">
+                Case Study di Implementazione Servizi Consulenza per Clienti Corporate
+            </h3>
+
+            <div class="project-description">
+                <p>Competenze potenzialmente trasferibili per eventi ricorrenti, lanci prodotto, convention, gala, celebrazioni corporate, e altri progetti.</p>
+            </div>
+
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h4 class="project-title">Case Study: Concerti Corporate Città Fiera Udine (2016-2018)</h4>
+                <div class="project-details">
+                    <p><strong>Cliente:</strong> Città Fiera Shopping Center - Uno dei più grandi centri commerciali d'Europa</p>
+                    <p><strong>Periodo:</strong> 3 anni di collaborazione continuativa</p>
+                    
+                    <p style="margin-top: 1rem;"><strong>Concept e Obiettivi:</strong></p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Eventi culturali esclusivi per clienti VIP del centro commerciale</li>
+                        <li>Rafforzamento brand positioning premium</li>
+                        <li>Fidelizzazione clientela alto-spendente</li>
+                        <li>Differenziazione competitiva attraverso cultura</li>
+                    </ul>
+                    
+                    <p style="margin-top: 1rem;"><strong>Formato Eventi:</strong></p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Orchestra sinfonica completa (47 orchestrali)</li>
+                        <li>300-400 invitati per evento</li>
+                        <li>Repertorio curato per target corporate</li>
+                        <li>Gestione completa: artistico, logistico, tecnico</li>
+                        <li>Costo medio €10k/evento chiavi in mano</li>
+                    </ul>
+                    
+                    <p style="margin-top: 1rem;"><strong>Valore Aggiunto:</strong></p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Format replicabile e scalabile</li>
+                        <li>Zero rischio organizzativo per cliente</li>
+                        <li>Qualità artistica garantita</li>
+                        <li>Esperienza memorabile per ospiti</li>
+                        <li>ROI reputazionale misurabile</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <h4 class="project-title">Modello Servizi per Corporate</h4>
+                <div class="project-details">
+                    <ul style="margin-top: 0.5rem;">
+                        <li><strong>Gestione professionale completa:</strong> Da concept a execution con coordinamento efficace e collaborazione cliente</li>
+                        <li><strong>Budget management:</strong> Trasparenza totale e rispetto budget concordato</li>
+                        <li><strong>Partnership duratura:</strong> 3 anni di collaborazione continuativa con risultati costanti</li>
+                        <li><strong>Offerta modulare:</strong> Formazioni orchestrali adattabili alle diverse esigenze e budget (da ensemble cameristici a orchestra completa)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h4 class="project-title">Case Study: Istituto Vivaldi - Turnaround Management (2000-2008)</h4>
+                <div class="project-details">
+                    <p>Gestione di operazione di salvataggio e rilancio di istituzione culturale in crisi profonda attraverso ristrutturazione economica, negoziazione sindacale e ricostruzione relazioni istituzionali.</p>
+                    
+                    <p style="margin-top: 1rem;"><strong>Situazione iniziale (2000):</strong></p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>€80.000 di debiti accumulati</li>
+                        <li>24 allievi rimasti (picco negativo)</li>
+                        <li>Rette inaccessibili che allontanavano famiglie</li>
+                        <li>Rapporti distrutti con proprietà edificio</li>
+                        <li>Zero riscaldamento e infiltrazioni d'acqua in aule e sala concerti</li>
+                        <li>Clima interno demotivante</li>
+                    </ul>
+                    
+                    <p style="margin-top: 1rem;"><strong>Azioni implementate:</strong></p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>Negoziazione transazioni sindacali per gestione passivo</li>
+                        <li>Convenzione con Comune di Monfalcone per rientro debito ristrutturato</li>
+                        <li>Ricostruzione rapporti con proprietà edificio</li>
+                        <li>Investimento in lavori necessari (impermeabilizzazione, riscaldamento)</li>
+                        <li>Ridefinizione politica prezzi accessibile</li>
+                        <li>Riorganizzazione offerta formativa</li>
+                    </ul>
+                    
+                    <p style="margin-top: 1rem;"><strong>Risultati raggiunti:</strong></p>
+                    <ul style="margin-top: 0.5rem;">
+                        <li>140 allievi (crescita 583% da picco negativo)</li>
+                        <li>Rette accessibili mantenendo pareggio bilancio</li>
+                        <li>Edificio ristrutturato e funzionale</li>
+                        <li>Riscaldamento ripristinato</li>
+                        <li>Rapporti istituzionali solidi</li>
+                        <li>Sostenibilità economica garantita per anni successivi</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card" style="margin-bottom: 2rem;">
+                <h4 class="project-title">Case Study: Festival "Nei Suoni dei Luoghi" (1998-2013)</h4>
+                <div class="project-details">
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">CASE STUDY SOSTENIBILITÀ ECONOMICA CULTURALE</h4>
+                <p><strong>Il più importante festival musicale transfrontaliero dei Balcani Occidentali</strong> - Modello innovativo di sostenibilità economica culturale attraverso mix funding pubblico-privato-internazionale ottimizzato. <strong>Fondatore e Direttore Artistico (1998-2013)</strong>.</p>
+                
+                <p><strong>15 anni di direzione continuativa</strong> • <strong>1.300+ concerti realizzati</strong> • <strong>8 paesi europei</strong> • <strong>35.000 artisti coinvolti</strong></p>
+                
+                <p style="font-style: italic; color: #495057; margin-top: 10px;"><strong>Prova di sostenibilità:</strong> Il Festival e l'Associazione Progetto Musica proseguono in autonomia dopo il periodo di direzione, confermando la sostenibilità del modello implementato.</p>
+
+                <div class="project-card" style="margin-top: 2rem; margin-bottom: 2rem;">
+                    <h4 class="project-title">Modello Economico - Fundraising Multi-Fonte e Network Partecipativo</h4>
+                    <div class="project-details">
+                        <p><strong>Budget medio annuale centralizzato: €700.000 gestiti + budget autonomo di stakeholder nei Balcani</strong> - attraverso diversificazione strategica delle fonti di finanziamento per garantire resilienza economica:</p>
+                        
+                        <ul style="margin-top: 1rem;">
+                            <li><strong>Fondi Europei e Internazionali</strong></li>
+                            <li style="margin-top: 0.5rem;"><strong>Contributi Pubblici Italia</strong> - Regione Friuli Venezia Giulia, Comuni Fvg e Veneto</li>
+                            <li style="margin-top: 0.5rem;"><strong>Contributi Pubblici Balcani</strong> - Municipi e Ministeri</li>
+                            <li style="margin-top: 0.5rem;"><strong>Partnership Private</strong> - Fondazioni bancarie e sponsor corporate</li>
+                        </ul>
+                        
+                        <ul style="margin-top: 0.5rem;">
+                            <li><strong>ROI Territoriale:</strong> Valorizzazione economica 8 paesi attraverso turismo culturale</li>
+                            <li><strong>Crescita esponenziale:</strong> da 12 concerti (1999) a 140 concerti/anno (2006)</li>
+                            <li><strong>60.000 visitatori/spettatori</strong> negli ultimi 3 anni di attività</li>
+                        </ul>
+                        
+                        <p style="margin-top: 1rem;"><strong>Modello di investimento distribuito:</strong> Gli enti balcanici partecipanti hanno contribuito in larga parte direttamente alle spese necessarie nei propri territori, generando un budget complessivo del progetto significativamente superiore al budget centralizzato del Festival. Questo approccio ha dimostrato l'efficacia del network partecipativo: quando gli enti investono risorse proprie, il loro commitment diventa reale e la sostenibilità del progetto si distribuisce su una rete solida di stakeholder attivi, non semplici beneficiari passivi.</p>
+                        
+                        <p style="margin-top: 1rem;"><strong>Modello di sostenibilità:</strong> Diversificazione costruita per garantire che nessuna singola fonte rappresentasse una dipendenza critica, assicurando continuità operativa anche in caso di riduzione temporanea di un canale.</p>
+                    </div>
+                </div>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Modello Business: Valorizzazione Territoriale come Asset Economico</h4>
+                <p>Il Festival ha implementato una <strong>strategia di valorizzazione territoriale sistematica</strong> che ha trasformato patrimoni culturali sottoutilizzati in <strong>asset economici generatori di valore</strong> attraverso concerti in location storiche e naturali <strong>negli 8 paesi partecipanti</strong>.</p>
+                
+                <h5 style="color: #495057; font-weight: 600; margin: 15px 0 8px 0;">Tipologie di Asset Territoriali Valorizzati:</h5>
+                <ul class="portfolio-list">
+                    <li><strong>Castelli e Fortificazioni Medievali:</strong> Italia (FVG, Veneto), Austria, Slovenia, Croazia, Serbia, Bosnia-Erzegovina, Montenegro, Albania</li>
+                    <li><strong>Siti Archeologici UNESCO:</strong> Teatri greco-romani, anfiteatri antichi, rovine storiche - generatori di turismo culturale</li>
+                    <li><strong>Architetture Religiose:</strong> Chiese romaniche/gotiche, abbazie, basiliche - monetizzazione patrimonio ecclesiastico</li>
+                    <li><strong>Ville Storiche e Palazzi Nobiliari:</strong> FVG e Veneto - riattivazione spazi aristocratici per eventi commerciali</li>
+                    <li><strong>Piazze e Centri Storici:</strong> Valorizzazione urban heritage per eventi pubblici a pagamento</li>
+                    <li><strong>Parchi Naturali:</strong> Integrazione natura-cultura per prodotti turistici premium</li>
+                </ul>
+
+                <h5 style="color: #495057; font-weight: 600; margin: 15px 0 8px 0;">ROI Territoriale Documentato:</h5>
+                <ul class="portfolio-list">
+                    <li><strong>1.300+ eventi realizzati</strong> in location precedentemente sottoutilizzate o inaccessibili</li>
+                    <li><strong>Indotto turistico:</strong> Creazione flussi turistici verso location periferiche in 8 paesi</li>
+                    <li><strong>Brand territoriale:</strong> Posizionamento di luoghi storici come destinazioni culturali di qualità</li>
+                    <li><strong>Sviluppo economico locale:</strong> Ricadute su ricettività, ristorazione, servizi locali</li>
+                    <li><strong>Sostenibilità:</strong> Modello di valorizzazione culturale autosufficiente replicabile</li>
+                </ul>
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Cooperazione Concreta Implementata</h4>
+                <ul class="portfolio-list">
+                    <li><strong>Donazioni Teatro Zaječar (Serbia)</strong> - Poltrone e sipari da Monfalcone</li>
+                    <li><strong>Biblioteca musicale Fier (Albania)</strong> - 500+ volumi e spartiti donati</li>
+                    <li><strong>Strumenti musicali distribuiti</strong> nei Balcani Occidentali</li>
+                    <li><strong>Attrezzature tecniche teatri</strong> - Donazioni e supporto logistico</li>
+                    <li><strong>Materiali didattici conservatori</strong> - Programmi capacity building</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Legacy Value</h4>
+                <p><strong>Modello replicabile</strong> per festival transfrontalieri europei che dimostra come la <strong>diversificazione delle fonti di finanziamento</strong> e la <strong>costruzione di reti istituzionali durature</strong> possano garantire sostenibilità economica di lungo periodo nel settore culturale.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Orchestra" class="section-logo">
+                Case Study: Orchestra Mitteleuropa (2014-2019)
+            </h3>
+            
+            <div class="section-content">
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">CASE STUDY ECCELLENZA ECONOMICA</h4>
+                <p><strong>Realtà culturale riconosciuta da Confindustria</strong> - Modello orchestra sinfonica con struttura dichiaratamente e nei fatti economico-commerciale in ambito produttivo e distributivo comprovata attraverso meccanismo commerciale innovativo nella Cultura.</p>
+                
+                <p><strong>Budget gestito:</strong> 1,1 milioni €/anno • <strong>55 dipendenti stabili</strong> • <strong>50 concerti/anno venduti su contratti stagionali part-time - 114 giornate di lavoro effettive, circa una vendita ogni 2 giorni</strong></p>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Modello Economico Innovativo</h4>
+                <p>Il <strong>meccanismo delle vendite</strong> ha determinato non solo il <strong>pareggio di bilancio</strong> ma anche <strong>residui positivi</strong>, dimostrando come il contributo pubblico possa essere utilizzato come <strong>volano strategico</strong> in una realtà complessa come quella di un'orchestra sinfonica.</p>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Risultati Economici Documentati</h4>
+                <ul class="portfolio-list">
+                    <li><strong>Entrate commerciali</strong> hanno coperto tutto il personale di staff e relative spese</li>
+                    <li><strong>Bonus di fine anno</strong> erogati a tutti gli orchestrali grazie ai residui positivi</li>
+                    <li><strong>Contributo pubblico come volano</strong> e non come dipendenza strutturale</li>
+                    <li><strong>Sostenibilità economica dimostrata</strong> attraverso vendite e partnership</li>
+                    <li><strong>Modello replicabile</strong> per altre orchestre europee</li>
+                </ul>
+
+                <div class="project-card" style="margin-top: 2rem; margin-bottom: 2rem;">
+                    <h4 class="project-title">KPI Operativi e Performance</h4>
+                    <div class="project-details">
+                        <p><strong>Metriche chiave che dimostrano eccellenza gestionale:</strong></p>
+                        
+                        <ul style="margin-top: 0.5rem;">
+                            <li><strong>Conversion rate concerti:</strong> 50 concerti venduti su 114 giorni lavorativi annui = 44% conversion</li>
+                            <li><strong>Fill rate medio:</strong> Sold-out costante garantito in ogni venue</li>
+                            <li><strong>Budget €1,1M/anno:</strong> €800k contributi pubblici + €300k entrate commerciali auto-generate</li>
+                            <li><strong>ROI economico:</strong> Entrate commerciali coprono 100% staff amministrativo + residui positivi</li>
+                            <li><strong>Efficienza operativa:</strong> Zero debiti, pagamenti puntuali orchestrali, bonus erogati</li>
+                            <li><strong>Pricing strategy:</strong> Trasparenza totale, stesso prezzo per tutti gli enti clienti</li>
+                            <li><strong>Media coverage:</strong> Copertura stampa superiore ai teatri più prestigiosi d'Italia</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card" style="margin-top: 2rem; margin-bottom: 2rem;">
+                    <h4 class="project-title">Partnership Prestigiose e Visibilità Internazionale</h4>
+                    <div class="project-details">
+                        <p><strong>Collaborazioni di alto profilo che hanno elevato il brand Orchestra:</strong></p>
+                        
+                        <ul style="margin-top: 0.5rem;">
+                            <li><strong>MOMA New York:</strong> Concerto presso Museum of Modern Art per comunità italiana NY</li>
+                            <li><strong>Biennale di Venezia:</strong> Partecipazione a evento internazionale d'arte contemporanea</li>
+                            <li><strong>Ljubljana Festival (Slovenia):</strong> Festival musicale più prestigioso Slovenia</li>
+                            <li><strong>Teatro Verdi Trieste:</strong> Partnership con teatro lirico storico</li>
+                            <li><strong>Mittelfest:</strong> Festival culturale internazionale Friuli</li>
+                            <li><strong>Festival Internazionale dell'Operetta di Trieste:</strong> Collaborazione con festival operettistico</li>
+                            <li><strong>Ente Regionale Teatrale FVG:</strong> Partnership istituzionale regionale</li>
+                            <li><strong>Filarmonica di Sarajevo:</strong> Collaborazione internazionale Bosnia-Erzegovina</li>
+                            <li><strong>Teatro di Udine:</strong> Partnership con teatro cittadino storico</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Strategia Marketing: Repertorio Trasversale come Leva Commerciale</h4>
+                <p>Implementazione di una <strong>strategia artistica innovativa</strong> basata su <strong>repertorio trasversale</strong> che ha ampliato significativamente la base clienti e generato maggiori entrate commerciali:</p>
+                <ul class="portfolio-list">
+                    <li><strong>Trascrizioni sinfoniche commissionate:</strong> Investimento in compositori locali FVG per arrangiamenti orchestrali di repertori non classici (Beatles, Rock Progressivo, Canzone d'Autore, Frank Sinatra)</li>
+                    <li><strong>Opere liriche in spazi aperti:</strong> Democratizzazione opera lirica per ampliamento mercato potenziale</li>
+                    <li><strong>Diversificazione offerta artistica:</strong> Orchestra duttile non limitata a repertorio classico tradizionale</li>
+                    <li><strong>Modello "Attrarre-Fidelizzare":</strong> Attrarre nuovo pubblico con Beatles/pop, fidelizzare con Beethoven/classico - creazione pubblico trasversale che acquista biglietti per entrambe le tipologie di concerto</li>
+                    <li><strong>ROI strategia:</strong> Ampliamento base spettatori paganti = maggiori entrate commerciali = sostenibilità economica dimostrata</li>
+                    <li><strong>Penetrazione territoriale:</strong> Riempimento teatri precedentemente vuoti per musica classica, inclusi teatri in zone montane e aree geograficamente complesse - dimostrazione capacità di creare pubblico dove non esisteva</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Legacy Value</h4>
+                <p><strong>Modello replicabile</strong> che dimostra come l'<strong>innovazione artistica strategica</strong> possa trasformare un'orchestra sinfonica da ente dipendente da contributi pubblici a <strong>realtà economicamente sostenibile</strong> con pubblico affezionato e diversificato.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Pace" class="section-logo">
+                Case Study: Concerto per la Pace - Cultural Diplomacy
+            </h3>
+            
+            <div class="section-content">
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">CASE STUDY CULTURAL DIPLOMACY</h4>
+                <p>Progetto pluriennale di <strong>brand positioning territoriale</strong> attraverso <strong>cultural diplomacy di alto profilo</strong>. Il <strong>Concerto per la Pace all'Ara Pacis Mundi di Medea</strong> ha trasformato il territorio locale in <strong>piattaforma internazionale per messaggi di pace</strong>, generando forte valore reputazionale e visibilità mediatica.</p>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Valore Strategico Location:</h4>
+                <p>I concerti si sono tenuti <strong>innanzi al Monumento civile alla Pace Ara Pacis Mundi sul Colle di Medea</strong> - uno dei rari monumenti civili in Italia contro tutte le guerre. Asset simbolico unico che ha permesso:</p>
+                <ul class="portfolio-list">
+                    <li><strong>Brand positioning:</strong> Medea/FVG come territorio di pace e diplomazia culturale</li>
+                    <li><strong>Visibilità mediatica:</strong> Attenzione nazionale/internazionale su territorio locale</li>
+                    <li><strong>Accessibilità pubblica:</strong> Concerti all'aperto per massimo impatto comunicativo</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Partnership di Prestigio - ROI Reputazionale:</h4>
+                <ul class="portfolio-list">
+                    <li><strong>Giorgio Albertazzi, Lina Sastri, Vincenzo Bocciarelli (attori), Stefan Milenkovich, Pavel Vernikov (violinisti):</strong> Artisti di calibro nazionale e internazionale - elevazione profilo evento</li>
+                    <li><strong>Solisti internazionali da zone di conflitto:</strong> Libano, Israele, USA, Iraq, Balcani</li>
+                    <li><strong>240 coristi regionali:</strong> Coinvolgimento comunità locale (minoranze incluse)</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">"Sfide Artistico-Politiche" - Innovazione Cultural Diplomacy:</h4>
+                <p>Metodologia innovativa di <strong>risposta culturale immediata a conflitti in corso</strong>, unendo in "sfide artistiche" musicisti provenienti da paesi in conflitto, trasformando divisioni politiche in collaborazioni artistiche. Approccio che ha generato forte impatto mediatico e reputazionale, come ad esempio:</p>
+                <ul class="portfolio-list">
+                    <li><strong>Libano-Israele:</strong> Violinisti nemici che suonano insieme → messaggio pace tangibile</li>
+                    <li><strong>USA-Iraq:</strong> Musicisti da paesi in guerra collaborano artisticamente</li>
+                    <li><strong>Nona Sinfonia Beethoven:</strong> Solisti balcanici (1 dalla Macedonia, 1 dalla Bosnia-Erzegovina, 1 dalla Serbia, 1 dall'Albania - rappresentanza di tutti i popoli coinvolti nei conflitti). Orchestra Karmelos ampliata per l'occasione con orchestrali provenienti da tutte le aree del conflitto balcanico - 70 elementi → "Inno alla Gioia" come riconciliazione simbolica</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">ROI Territoriale e Reputazionale:</h4>
+                <ul class="portfolio-list">
+                    <li><strong>Brand territoriale:</strong> FVG come terra di pace e cultural diplomacy</li>
+                    <li><strong>Visibilità internazionale:</strong> Attenzione media su territorio periferico</li>
+                    <li><strong>Valore reputazionale:</strong> Associazione territorio con valori universali (pace, dialogo, inclusione)</li>
+                    <li><strong>Modello esportabile:</strong> Metodologia "sfide artistico-politiche" replicabile per altri territori</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Network" class="section-logo">
+                Network e Relazioni Istituzionali
+            </h3>
+            
+            <div class="project-description">
+                <p>Network professionale costruito in 30 anni attraverso <strong>120+ enti pubblici collaboratori</strong> e <strong>partnership con organismi internazionali</strong> di prestigio. Relazioni durature basate su risultati documentati, fiducia reciproca e capacità dimostrata di delivery su progetti complessi.</p>
+            </div>
+
+            <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+                
+                <div class="project-card">
+                    <h4 class="project-title">Enti Pubblici Italia (120+)</h4>
+                    <div class="project-details">
+                        <p><strong>Relazioni istituzionali consolidate:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li><strong>Regione Friuli Venezia Giulia:</strong> Collaborazione trentennale, 3 norme di legge regionali ottenute</li>
+                            <li><strong>Regione Veneto:</strong> Collaborazione pluriennale progetti transfrontalieri</li>
+                            <li><strong>4 Province:</strong> Gorizia, Trieste, Udine, Pordenone</li>
+                            <li><strong>45 Comuni in protocollo:</strong> Network capillare territoriale FVG + Comuni veneti</li>
+                            <li><strong>Ministeri:</strong> Esteri, Beni Culturali, Presidenza Consiglio</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Organismi Internazionali</h4>
+                    <div class="project-details">
+                        <p><strong>Partnership di prestigio:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li><strong>UNESCO Roma</strong></li>
+                            <li><strong>UNOPS - Ginevra</strong></li>
+                            <li><strong>UNDP:</strong> Programma ART GOLD</li>
+                            <li><strong>CEI (Central European Initiative):</strong> Partnership strategiche transfrontaliere</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Enti Pubblici Balcani Occidentali</h4>
+                    <div class="project-details">
+                        <p><strong>Network in 6 paesi:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Slovenia, Croazia</li>
+                            <li>Serbia, Bosnia-Erzegovina</li>
+                            <li>Montenegro, Albania</li>
+                        </ul>
+                        <p style="margin-top: 1rem;"><strong>Tipologie enti:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li>Municipi e amministrazioni locali</li>
+                            <li>Ministeri cultura e istruzione</li>
+                            <li>Istituzioni culturali nazionali</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Network Privato</h4>
+                    <div class="project-details">
+                        <p><strong>Relazioni settore privato:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li><strong>Fondazioni e Banche:</strong> fondi ricorrenti €20k-50k/anno</li>
+                            <li><strong>Confindustria</strong></li>
+                            <li><strong>Sponsor corporate:</strong> Gestione partnership multi-anno</li>
+                        </ul>
+                        <p style="margin-top: 1rem; font-style: italic;">Capacità dimostrata di costruire ponti tra mondo pubblico e privato.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Riconoscimenti" class="section-logo">
+                Riconoscimenti e Premi
+            </h3>
+            
+            <div class="project-description">
+                <p>Riconoscimenti istituzionali e premi ricevuti</p>
+            </div>
+
+            <div class="section-content">
+                <ul class="portfolio-list">
+                    <li><strong>Patrocinio e Medaglia della Presidenza della Repubblica Italiana</strong> - Riconoscimento massimo istituzionale italiano per progetti di eccellenza culturale</li>
+                    <li><strong>Patrocini ministeriali:</strong> Ministero degli Affari Esteri, Ministero dei Beni e delle Attività Culturali, Presidenza del Consiglio dei Ministri</li>
+                    <li><strong>Premio "Personalità Europea per il Turismo"</strong> consegnato dal Comune di Roma</li>
+                    <li><strong>Riconoscimenti UNESCO Roma</strong></li>
+                    <li><strong>Best Practice certificata dal Programma EU COMPART</strong></li>
+                    <li><strong>WACAP (World Alliance Cities Against Poverty) - 2 edizioni:</strong> Presentazione best practice culturale riconosciuta UN "Nei Suoni dei Luoghi" contro la lotta alla povertà - Valencia (organizzazione UNDP/Regina di Spagna) e Atene (organizzazione UNDP/Presidente della Repubblica Greca)</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Conferenze" class="section-logo">
+                Conferenze Internazionali, Ricerca, Pubblicazioni
+            </h3>
+            
+            <div class="project-description">
+                <p>Attività di ricerca, capacity building e disseminazione scientifica su economia culturale, sviluppo territoriale e cooperazione internazionale attraverso conferenze, workshop e pubblicazioni.</p>
+            </div>
+
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h4 class="project-title">Conferenza Internazionale "Musica e Territorio"</h4>
+                    <div class="project-details">
+                    <strong>Sottotitolo:</strong> "L'evento musicale come strumento di integrazione culturale e valorizzazione territoriale"<br>
+                    <strong>Date:</strong> 24-25 Ottobre 2006<br>
+                    <strong>Sede:</strong> Starhotels Savoia Excelsior Palace, Trieste<br>
+                    <strong>Organizzatori:</strong> Associazione Progetto Musica - In.C.E (Iniziativa Centro Europea)<br>
+                    <strong>Struttura:</strong> 2 giorni (3 Tavole Tecniche + Convegno pubblico internazionale)<br>
+                    <strong>Traduzione simultanea:</strong> 4 lingue<br>
+                    <strong>Pubblicazione:</strong> Atti della Conferenza (86 pagine)<br><br>
+                    
+                    <strong>Giorno 1 - 24 Ottobre: Tavole Tecniche Riservate</strong><br>
+                    Tre sessioni di lavoro specialistiche con:<br>
+                    • Docenti universitari italiani e balcanici<br>
+                    • Esperti Nazioni Unite (UNDP, UNOPS)<br>
+                    • Rappresentanti istituzioni locali e regionali<br>
+                    • Funzionari ministeriali<br>
+                    • Operatori culturali e partner operativi<br><br>
+                    
+                    <strong>Tematiche Tavole Tecniche:</strong><br>
+                    1. <strong>Rete Istituzionale:</strong> Modelli di cooperazione transfrontaliera<br>
+                    2. <strong>Valore della Musica:</strong> Sviluppo umano e integrazione culturale<br>
+                    3. <strong>Turismo e Territorio:</strong> Valorizzazione economica patrimoni<br><br>
+                    
+                    <strong>Giorno 2 - 25 Ottobre: Convegno Pubblico Internazionale</strong><br>
+                    Partecipanti da 7 paesi (oltre 60 relatori negli atti):<br>
+                    • <strong>Italia:</strong> Università Trieste, Udine, Conservatorio Udine, Regione FVG, Province (Trieste, Gorizia), Comuni, Ministeri<br>
+                    • <strong>Albania:</strong> Politecnico Tirana, Ministero Turismo/Cultura, Parlamento albanese (3 vicepresidenti)<br>
+                    • <strong>Serbia:</strong> Fondazione Balkankult, Teatro Zaječar<br>
+                    • <strong>Bosnia-Erzegovina:</strong> Fondazione GESO, Agenzie sviluppo regionale<br>
+                    • <strong>Croazia:</strong> Gioventù Musicale Croata<br>
+                    • <strong>Slovenia:</strong> Gioventù Musicale Slovena<br>
+                    • <strong>Francia:</strong> Conservatorio Superiore di Parigi<br>
+                    • <strong>Organismi Internazionali:</strong> UNDP, UNOPS, WHO, Iniziativa Centro Europea<br><br>
+                    
+                    <strong>Assi Tematici Trasversali Trattati:</strong><br>
+                    • <strong>Musica e Sviluppo Turistico:</strong> Valorizzazione territoriale, circuiti culturali transnazionali, indotto economico locale<br>
+                    • <strong>Musica e Sviluppo Territoriale:</strong> Riattivazione patrimoni sottoutilizzati, creazione flussi turistici, ricadute su ricettività e servizi<br>
+                    • <strong>Musica e Sviluppo Umano:</strong> Coesione sociale, integrazione interculturale, capacity building comunitario, riconciliazione post-conflitto<br>
+                    • <strong>Cooperazione Accademica:</strong> Metodologie accordi universitari, scambi studenteschi, mobilità docenti, internazionalizzazione conservatori<br>
+                    • <strong>Best Practices Europee:</strong> Modelli replicabili certificati UE per cooperazione culturale<br>
+                    • <strong>Fondi Strutturali:</strong> Programmazione 2007-2013, coprogettazione europea, cofinanziamento<br><br>
+                    
+                    <strong>Risultati Documentati del Convegno:</strong><br>
+                    • <strong>Firma Protocollo Università Udine - Politecnico Tirana</strong> (cerimonia ufficiale durante convegno)<br>
+                    • <strong>Firma Protocollo Conservatorio Udine - Accademia Arti Tirana</strong><br>
+                    • Framework metodologico cooperazione universitaria Italia-Balcani documentato<br>
+                    • Pubblicazione atti scientifici (86 pagine) come riferimento per progetti futuri<br>
+                    • Creazione network istituzionale permanente tra 120+ enti partecipanti<br>
+                    • Proposta rete cattedre musicologia per ricerca congiunta<br>
+                    • Linee guida Progetto "Nei Suoni dei Luoghi" 2007-2009<br><br>
+                    
+                    <strong>Complessità Organizzativa:</strong><br>
+                    • Traduzione simultanea in 4 lingue per garantire accessibilità a tutti i partecipanti<br>
+                    • Coordinamento logistico internazionale per oltre 60 relatori<br>
+                    • Produzione documentazione scientifica multilingue<br>
+                    • Interventi musicali dal vivo (arpa) durante cerimonie ufficiali<br><br>
+                    
+                    <strong>Legacy a Lungo Termine:</strong><br>
+                    Evento fondativo per cooperazione accademica e culturale Italia-Balcani che ha generato:<br>
+                    • Accordi universitari duraturi ancora attivi<br>
+                    • Metodologie replicate in progetti europei successivi<br>
+                    • Riferimento scientifico per cooperazione transfrontaliera<br>
+                    • Modello "musica come ponte" per integrazione europea
+                    </div>
+                </div>
+
+                <div class="project-card">
+                <h4 class="project-title">Meeting Internazionale "Il Caso Nei Suoni dei Luoghi"</h4>
+                    <div class="project-details">
+                    <strong>Data:</strong> Dicembre 2005<br>
+                    <strong>Sede:</strong> Tirana, Albania<br>
+                    <strong>Coordinamento:</strong> UNOPS/PASARP Albania - Associazione Progetto Musica - ASMH Associations<br>
+                    <strong>Evento storico:</strong> Prima presenza ufficiale delegazione Regione FVG in Albania<br>
+                    <strong>Partecipanti alto livello:</strong> Vicepresidente Parlamento Albanese, Ministero Turismo/Cultura, Commissione Parlamentare Media/Cultura, Sindaci (Fier, Durazzo, Scutari, Kruja), Direttore UNOPS/UNDP, Fondazioni internazionali (Soros, Pro-Helvetia), delegazione Regione FVG<br>
+                    <strong>Risultati:</strong> Firma lettera d'intenti collettiva | Presentazione modulo "NSDL/Apollonia Festival" | Consolidamento network istituzionale Albania-Italia | Framework operativo 2006
+                    </div>
+                </div>
+
+                <div class="project-card">
+                <h4 class="project-title">Workshop Partenariato NSDL "Musica e Cultura come Motore di Sviluppo e Marketing Territoriale"</h4>
+                    <div class="project-details">
+                    <strong>Serie di 3 Workshop Operativi (2005-2006):</strong><br>
+                    • Workshop Tirana, Albania - 2005<br>
+                    • Workshop Durres, Albania - 2005<br>
+                    • Workshop Grožnjan, Croazia - 2006<br><br>
+                    
+                    <strong>Natura degli eventi:</strong><br>
+                    • <strong>Workshop tecnici di capacity building</strong> su sviluppo territoriale attraverso cultura<br>
+                    • <strong>Riunioni operative di partenariato</strong> per coordinamento progetto NSDL transfrontaliero<br>
+                    • <strong>Sessioni di pianificazione strategica</strong> tra partner Italia-Balcani<br><br>
+                    
+                    <strong>Temi Centrali Trattati:</strong><br>
+                    • <strong>Sviluppo territoriale sostenibile</strong> attraverso eventi culturali musicali<br>
+                    • <strong>Marketing territoriale</strong> e promozione destinazioni turistiche attraverso musica<br>
+                    • <strong>Turismo culturale</strong> come veicolo di sviluppo economico locale<br>
+                    • <strong>Valorizzazione patrimoni</strong> culturali e ambientali per indotto economico<br>
+                    • <strong>Creazione circuiti turistici</strong> integrati tra location storiche<br>
+                    • <strong>Capacity building amministrazioni locali</strong> per gestione eventi culturali<br><br>
+                    
+                    <strong>Partecipanti:</strong><br>
+                    • Partner operativi NSDL da 6 paesi (Italia, Croazia, Serbia, Bosnia Herzegovina, Montenegro, Albania)<br>
+                    • Rappresentanti amministrazioni locali ospitanti<br>
+                    • Assessori turismo e cultura comuni coinvolti<br>
+                    • Operatori turistici territoriali<br>
+                    • Esperti sviluppo locale e marketing territoriale<br><br>
+                    
+                    <strong>Obiettivi Operativi:</strong><br>
+                    • Coordinamento implementazione progetto NSDL nei territori<br>
+                    • Condivisione best practices tra partner transfrontalieri<br>
+                    • Pianificazione logistica e artistica stagione concertistica<br>
+                    • Sviluppo strategie comuni promozione turistica<br>
+                    • Rafforzamento network partenariale<br><br>
+                    
+                    <strong>Metodologia:</strong><br>
+                    Approccio "learning by doing" combinando sessioni formative teoriche con pianificazione operativa concreta per tradurre immediatamente conoscenze in azioni territoriali
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">"Itinerary Suggestions" - Prima Guida Turistica Transnazionale Adriatico-Balcanica</h4>
+                    <div class="project-details">
+                        <strong>Sottotitolo:</strong> "From Friuli Venezia Giulia to the Western Balkan Countries"<br>
+                        <strong>Anno:</strong> 2006<br>
+                        <strong>Pagine:</strong> 40+ (bilingue IT/EN)<br>
+                        <strong>Programma:</strong> INTERREG IIIA Transfrontaliero Adriatico - FESR<br>
+                        <strong>Coordinamento:</strong> Responsabile Sviluppo Turistico e Territoriale Associazione Progetto Musica<br><br>
+                        
+                        <p><strong>Innovazione:</strong> Prima brochure turistica transnazionale integrata FVG-Balcani Occidentali che utilizza eventi musicali del Festival NSDL come filo conduttore strategico per valorizzare patrimoni culturali, storici e naturalistici di 8 paesi attraverso percorsi tematici.</p>
+                        
+                        <p style="margin-top: 1rem;"><strong>3 Percorsi Tematici Transfrontalieri:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li><strong>Siti del Mondo Romano:</strong> Aquileia (UNESCO Italia), Felix Romuliana (Serbia), Sremska Mitrovica (Serbia), Durrës (Albania), Apollonia-Fier (Albania)</li>
+                            <li><strong>Castelli Medievali e Rinascimentali:</strong> 15+ castelli da FVG a Albania - Castello di Gorizia, Brazzacco, Flagogna, Trakošćan (Croazia), Veliki Tabor (Croazia), Maglaj (Bosnia), Vranduk (Bosnia), Travnik (Bosnia), Smederevo (Serbia), Shkodra (Albania), Kruja (Albania)</li>
+                            <li><strong>Parchi Naturali e Aree Protette:</strong> 13 parchi transfrontalieri - Val Rosandra (Italia), Foci dell'Isonzo (Italia), Lago di Cornino (Italia), Medvednica (Croazia), Kraljeva Sutjeska (Bosnia), Kozara (Bosnia), Derdap (Serbia), Llogara (Albania), Isola Franc Joseph (Albania), Thethi (Albania), Monte Dajti (Albania), Butrinto (Albania)</li>
+                        </ul>
+                        
+                        <p style="margin-top: 1rem;"><strong>Valore Aggiunto Operativo:</strong></p>
+                        <ul style="margin-top: 0.5rem;">
+                            <li><strong>Informazioni pratiche complete:</strong> Hotel, ristoranti, contatti uffici turistici locali per ogni località visitata</li>
+                            <li><strong>Modello pioneristico:</strong> Turismo culturale sostenibile basato su cooperazione internazionale</li>
+                            <li><strong>Superamento autoreferenzialità:</strong> Sistema di rete transnazionale che genera sviluppo economico locale distribuito</li>
+                            <li><strong>Posizionamento competitivo:</strong> Area adriatico-balcanica come destinazione internazionale integrata</li>
+                            <li><strong>Multiculturalità:</strong> Valorizzazione eredità comuni (romana, medievale, naturalistica) che legano territori diversi</li>
+                        </ul>
+                        
+                        <p style="margin-top: 1rem;"><strong>Impatto Territoriale:</strong></p>
+                        <p>Strumento operativo concreto per sviluppo economico locale attraverso valorizzazione integrata di patrimoni culturali, storici e naturalistici comuni. Modello replicabile per altre aree transfrontaliere europee che trasforma eventi culturali in driver di turismo sostenibile.</p>
+                        
+                        <p style="margin-top: 1rem; font-style: italic; color: #495057;">Pubblicazione realizzata nell'ambito delle attività del Festival "Nei Suoni dei Luoghi" 2004-2006, testimonia l'approccio sistemico alla valorizzazione territoriale attraverso cultura come leva di sviluppo economico sostenibile.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Track Record" class="section-logo">
+                Track Record
+            </h3>
+            
+            <div class="section-content" style="margin-bottom: 25px;">
+                <p style="font-size: 18px; font-weight: 600; color: #2c3e50; line-height: 1.6;">
+                    30 anni di esperienza nella trasformazione della cultura da costo a investimento redditizio. €14M+ gestiti, 120+ enti partner, 8 paesi, zero contenziosi.
+                </p>
+            </div>
+            
+            <div class="experience-grid" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; margin-top: 30px;">
+                
+                <div class="experience-item" style="background: rgba(52, 152, 219, 0.08); padding: 25px; border-radius: 8px; border-left: 4px solid #3498db; text-align: center;">
+                    <h4 class="experience-title" style="font-size: 32px; font-weight: 700; color: #2c3e50; margin: 0 0 10px 0;">€14M+</h4>
+                    <p class="experience-description" style="font-size: 14px; color: #495057; margin: 0 0 12px 0;">Fondi totali gestiti con rendicontazione certificata</p>
+                    <p style="font-size: 12px; color: #7f8c8d; margin: 0; line-height: 1.4;">► Progetti UE, nazionali e regionali • Zero contenziosi • 100% trasparenza</p>
+                </div>
+
+                <div class="experience-item" style="background: rgba(52, 152, 219, 0.08); padding: 25px; border-radius: 8px; border-left: 4px solid #3498db; text-align: center;">
+                    <h4 class="experience-title" style="font-size: 32px; font-weight: 700; color: #2c3e50; margin: 0 0 10px 0;">€2.2M</h4>
+                    <p class="experience-description" style="font-size: 14px; color: #495057; margin: 0 0 12px 0;">Budget annuale medio gestito</p>
+                    <p style="font-size: 12px; color: #7f8c8d; margin: 0; line-height: 1.4;">► €1.8M pubblico + €400k autofinanziamento • Pareggi bilancio costanti</p>
+                </div>
+
+                <div class="experience-item" style="background: rgba(52, 152, 219, 0.08); padding: 25px; border-radius: 8px; border-left: 4px solid #3498db; text-align: center;">
+                    <h4 class="experience-title" style="font-size: 32px; font-weight: 700; color: #2c3e50; margin: 0 0 10px 0;">€240k</h4>
+                    <p class="experience-description" style="font-size: 14px; color: #495057; margin: 0 0 12px 0;">Eventi corporate gestiti (CittàFiera)</p>
+                    <p style="font-size: 12px; color: #7f8c8d; margin: 0; line-height: 1.4;">► 3 anni partnership continuativa • Eventi esclusivi 300-400 ospiti</p>
+                </div>
+
+                <div class="experience-item" style="background: rgba(52, 152, 219, 0.08); padding: 25px; border-radius: 8px; border-left: 4px solid #3498db; text-align: center;">
+                    <h4 class="experience-title" style="font-size: 32px; font-weight: 700; color: #2c3e50; margin: 0 0 10px 0;">47</h4>
+                    <p class="experience-description" style="font-size: 14px; color: #495057; margin: 0 0 12px 0;">Orchestrali stabili tempo indeterminato coordinati</p>
+                    <p style="font-size: 12px; color: #7f8c8d; margin: 0; line-height: 1.4;">► Orchestra Mitteleuropa • Job Act • Stabilizzazione senza contenziosi</p>
+                </div>
+
+                <div class="experience-item" style="background: rgba(52, 152, 219, 0.08); padding: 25px; border-radius: 8px; border-left: 4px solid #3498db; text-align: center;">
+                    <h4 class="experience-title" style="font-size: 32px; font-weight: 700; color: #2c3e50; margin: 0 0 10px 0;">120+</h4>
+                    <p class="experience-description" style="font-size: 14px; color: #495057; margin: 0 0 12px 0;">Enti partner pubblici/privati costruiti</p>
+                    <p style="font-size: 12px; color: #7f8c8d; margin: 0; line-height: 1.4;">► 30 anni di relazioni • Italia + 7 paesi Balcani • Network attivo e operativo</p>
+                </div>
+
+                <div class="experience-item" style="background: rgba(52, 152, 219, 0.08); padding: 25px; border-radius: 8px; border-left: 4px solid #3498db; text-align: center;">
+                    <h4 class="experience-title" style="font-size: 32px; font-weight: 700; color: #2c3e50; margin: 0 0 10px 0;">8</h4>
+                    <p class="experience-description" style="font-size: 14px; color: #495057; margin: 0 0 12px 0;">Paesi europei di operatività progetti</p>
+                    <p style="font-size: 12px; color: #7f8c8d; margin: 0; line-height: 1.4;">► Italia, Slovenia, Croazia, Bosnia, Serbia, Montenegro, Albania, Austria</p>
+                </div>
+
+                <div class="experience-item" style="background: rgba(52, 152, 219, 0.08); padding: 25px; border-radius: 8px; border-left: 4px solid #3498db; text-align: center;">
+                    <h4 class="experience-title" style="font-size: 32px; font-weight: 700; color: #2c3e50; margin: 0 0 10px 0;">25+</h4>
+                    <p class="experience-description" style="font-size: 14px; color: #495057; margin: 0 0 12px 0;">Anni di esperienza continuativa settore culturale</p>
+                    <p style="font-size: 12px; color: #7f8c8d; margin: 0; line-height: 1.4;">► Dal 1998 ad oggi • Leadership costante • Track record documentato</p>
+                </div>
+
+                <div class="experience-item" style="background: rgba(52, 152, 219, 0.08); padding: 25px; border-radius: 8px; border-left: 4px solid #3498db; text-align: center;">
+                    <h4 class="experience-title" style="font-size: 32px; font-weight: 700; color: #2c3e50; margin: 0 0 10px 0;">200k</h4>
+                    <p class="experience-description" style="font-size: 14px; color: #495057; margin: 0 0 12px 0;">Persone raggiunte con eventi culturali</p>
+                    <p style="font-size: 12px; color: #7f8c8d; margin: 0; line-height: 1.4;">► Pubblico totale movimentato sino al 2019 • Eventi transfrontalieri</p>
+                </div>
+
+                <div class="experience-item" style="background: rgba(52, 152, 219, 0.08); padding: 25px; border-radius: 8px; border-left: 4px solid #3498db; text-align: center;">
+                    <h4 class="experience-title" style="font-size: 32px; font-weight: 700; color: #2c3e50; margin: 0 0 10px 0;">15</h4>
+                    <p class="experience-description" style="font-size: 14px; color: #495057; margin: 0 0 12px 0;">Anni continuità operativa Festival NSDL</p>
+                    <p style="font-size: 12px; color: #7f8c8d; margin: 0; line-height: 1.4;">► 1998-2013 senza interruzioni • 1.300+ concerti realizzati</p>
+                </div>
+
+                <div class="experience-item" style="background: rgba(52, 152, 219, 0.08); padding: 25px; border-radius: 8px; border-left: 4px solid #3498db; text-align: center;">
+                    <h4 class="experience-title" style="font-size: 32px; font-weight: 700; color: #2c3e50; margin: 0 0 10px 0;">~100</h4>
+                    <p class="experience-description" style="font-size: 14px; color: #495057; margin: 0 0 12px 0;">Contratti/anno gestiti in media</p>
+                    <p style="font-size: 12px; color: #7f8c8d; margin: 0; line-height: 1.4;">► Orchestrali, artisti, fornitori • 20+ anni continuativi • 35.000 totali</p>
+                </div>
+
+                <div class="experience-item" style="background: rgba(52, 152, 219, 0.08); padding: 25px; border-radius: 8px; border-left: 4px solid #3498db; text-align: center;">
+                    <h4 class="experience-title" style="font-size: 32px; font-weight: 700; color: #2c3e50; margin: 0 0 10px 0;">3</h4>
+                    <p class="experience-description" style="font-size: 14px; color: #495057; margin: 0 0 12px 0;">Leggi Regionali ottenute per progetti culturali</p>
+                    <p style="font-size: 12px; color: #7f8c8d; margin: 0; line-height: 1.4;">► Festival NSDL • Orchestra Mitteleuropa • Istituto Vivaldi • Regione FVG</p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Pubblicazioni su Economia della Cultura -->
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Pubblicazioni" class="section-logo">
+                Pubblicazioni su Economia della Cultura
+            </h3>
+            
+            <p class="section-content">
+                Articoli che analizzano il legame tra musica classica, sviluppo economico territoriale e strategie di business sostenibili nel settore culturale.
+            </p>
+
+            <div class="projects-grid" style="grid-template-columns: 1fr;">
+                
+                <!-- Articolo 1: Music & Tourism -->
+                <div class="project-card" style="border-left: 4px solid #27ae60;">
+                    <h4 class="project-title">Musica e Territori: Come la Musica Classica Live Genera Turismo e Alimenta le Economie Locali</h4>
+                    <div class="project-details" style="margin-bottom: 12px;">
+                        <strong>Pubblicato:</strong> LinkedIn • Luglio 2025<br>
+                        <strong>Temi:</strong> Turismo culturale • ROI territoriale • Sviluppo economico locale
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 12px; font-size: 14px;">
+                        "Il turismo è il movimento di persone verso destinazioni che attraggono il loro interesse attraverso il loro appeal culturale, naturale o esperienziale. La musica classica può trasformare destinazioni!"
+                    </p>
+                    <p style="margin-bottom: 8px;"><strong>Impatto economico della musica live:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px; font-size: 14px;">
+                        <li><strong>Turismo di massa vs minore:</strong> Hub costieri come centri di produzione virtuale per decentralizzazione musicale</li>
+                        <li><strong>Gemme nascoste valorizzate:</strong> Concerti in location atipiche (cappelle antiche, foreste, castelli) come attrattori turistici</li>
+                        <li><strong>Integrazione offerta turistica:</strong> Musica classica come servizio complementare a enogastronomia e patrimonio</li>
+                        <li><strong>Linguaggio universale:</strong> La musica classica trascende barriere linguistiche, attrae visitatori internazionali</li>
+                        <li><strong>ROI territoriale:</strong> Musica come pilastro dell'economia reale e settori produttivi</li>
+                    </ul>
+                    <p style="margin-top: 12px; font-size: 14px;">
+                        <a href="https://www.linkedin.com/pulse/international-consultant-music-art-culture-cultural-massimo-gabellone-uxb7e/" target="_blank" style="color: #2c3e50; font-weight: 600; text-decoration: underline;">
+                            → Leggi l'articolo completo su LinkedIn
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Articolo 2: Mitteleuropa Business Model -->
+                <div class="project-card" style="border-left: 4px solid #27ae60;">
+                    <h4 class="project-title">Case Study Turnaround: Orchestra Mitteleuropa - KPI e Business Model Culturale</h4>
+                    <div class="project-details" style="margin-bottom: 12px;">
+                        <strong>Pubblicato:</strong> LinkedIn • Luglio 2025<br>
+                        <strong>Temi:</strong> KPI culturali • Business model • Turnaround management • ROI
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 12px; font-size: 14px;">
+                        "Dalla crisi al successo: come ho trasformato un'orchestra regionale sull'orlo della chiusura in un modello economico sostenibile con risultati misurabili."
+                    </p>
+                    <p style="margin-top: 12px; font-size: 14px;">
+                        <a href="https://www.linkedin.com/pulse/international-consultant-music-art-culturecultural-massimo-gabellone-76gzf/" target="_blank" style="color: #2c3e50; font-weight: 600; text-decoration: underline;">
+                            → Leggi l'articolo completo su LinkedIn
+                        </a>
+                    </p>
+                </div>
+
+                <!-- Articolo 3: Strategie di Mercato -->
+                <div class="project-card" style="border-left: 4px solid #27ae60;">
+                    <h4 class="project-title">La Crisi della Musica Classica: Strategie di Marketing e Sviluppo Business</h4>
+                    <div class="project-details" style="margin-bottom: 12px;">
+                        <strong>Pubblicato:</strong> LinkedIn • Settembre 2024<br>
+                        <strong>Temi:</strong> Market analysis • Stakeholder engagement • Strategie di rilancio
+                    </div>
+                    <p style="font-style: italic; margin-bottom: 12px; font-size: 14px;">
+                        "Il pubblico della musica classica è in costante diminuzione. Ma le istituzioni pubbliche vogliono investire - solo che non vogliono pagare per concerti con pubblico scarso. La soluzione? Proposte coerenti con bisogni territoriali."
+                    </p>
+                    <p style="margin-bottom: 8px;"><strong>Strategie Business per Settore Culturale:</strong></p>
+                    <ul style="margin: 10px 0; padding-left: 20px; font-size: 14px;">
+                        <li><strong>Analisi stakeholder:</strong> Le istituzioni pubbliche vogliono ROI sociale misurabile</li>
+                        <li><strong>Value proposition:</strong> Progetti multidisciplinari con impatto su sviluppo umano, territoriale ed economico</li>
+                        <li><strong>Market positioning:</strong> Musica come strumento di sviluppo, non solo intrattenimento</li>
+                        <li><strong>Comunicazione efficace:</strong> Chiarezza, efficienza e professionalità per ottenere finanziamenti</li>
+                        <li><strong>Awareness territoriale:</strong> Proporre soluzioni concrete ai bisogni delle comunità</li>
+                        <li><strong>Partnership building:</strong> Collaborazione tra stakeholder per massimizzare impatto</li>
+                    </ul>
+                    <p style="margin-top: 12px; font-size: 14px;">
+                        <a href="https://www.linkedin.com/posts/massimogabellone_generally-speaking-i-see-that-the-music-activity-7338521035928985602-ckYF" target="_blank" style="color: #2c3e50; font-weight: 600; text-decoration: underline;">
+                            → Leggi l'articolo completo su LinkedIn
+                        </a>
+                    </p>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Cross-Reference Portfolio -->
+        <div class="portfolio-section" style="background: #f8f9fa; padding: 30px; border-left: 4px solid #2c3e50; margin: 40px 0;">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Portfolio" class="section-logo">
+                Visione d'Insieme delle Competenze
+            </h3>
+            <p style="margin-bottom: 15px; font-size: 16px; line-height: 1.6;">Questo portfolio si concentra su <strong>sostenibilità economica, ROI culturale e business model innovativi</strong>. Per una comprensione completa delle mie competenze multidisciplinari e della mia esperienza trentennale, esplora anche:</p>
+            <ul style="margin-top: 15px; line-height: 2; list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 10px;"><img src="static/images/logo.jpg" style="width: 16px; height: 16px; margin-right: 8px; filter: hue-rotate(200deg) brightness(1.1) saturate(1.3); vertical-align: middle;"> <a href="portfolio_cultura_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio Cultura</a> — Direzione artistica, festival internazionali, democratizzazione culturale</li>
+                <li style="margin-bottom: 10px;"><img src="static/images/logo.jpg" style="width: 16px; height: 16px; margin-right: 8px; filter: hue-rotate(120deg) brightness(1.1) saturate(1.3); vertical-align: middle;"> <a href="portfolio_fondi_internazionali_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio Fondi Internazionali</a> — Europrogettazione, grant writing, fundraising multi-fonte (€14M gestiti)</li>
+                <li style="margin-bottom: 10px;"><img src="static/images/logo.jpg" style="width: 16px; height: 16px; margin-right: 8px; filter: hue-rotate(280deg) brightness(1.1) saturate(1.3); vertical-align: middle;"> <a href="portfolio_universita_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio Università</a> — Capacity building accademico, progetti INTERREG, formazione universitaria</li>
+                <li style="margin-bottom: 10px;"><img src="static/images/logo.jpg" style="width: 16px; height: 16px; margin-right: 8px; filter: hue-rotate(330deg) brightness(1.1) saturate(1.3); vertical-align: middle;"> <a href="portfolio_ngo_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio NGO</a> — Cooperazione decentrata, peacebuilding, sviluppo territoriale community-based</li>
+                <li style="margin-bottom: 10px;"><img src="static/images/logo.jpg" style="width: 16px; height: 16px; margin-right: 8px; filter: hue-rotate(0deg) brightness(1.0) saturate(1.2); vertical-align: middle;"> <a href="portfolio_musicisti_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio Musicisti</a> — Servizi professionali: digital marketing, business development, career coaching</li>
+                <li style="margin-bottom: 10px;"><img src="static/images/logo.jpg" style="width: 16px; height: 16px; margin-right: 8px; filter: hue-rotate(270deg) brightness(1.1) saturate(1.3); vertical-align: middle;"> <a href="portfolio_pianista_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio Pianista</a> — Concertismo professionale, repertorio, performance internazionali</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
