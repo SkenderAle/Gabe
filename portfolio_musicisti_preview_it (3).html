@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Servizi Musicisti - Massimo Gabellone</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6; color: #2c3e50;
+            background: linear-gradient(to bottom, rgba(231, 76, 60, 0.02) 0%, rgba(192, 57, 43, 0.015) 50%, rgba(236, 112, 99, 0.01) 100%);
+            min-height: 100vh; font-size: 16px;
+        }
+        .portfolio-container {
+            max-width: 800px; margin: 0 auto; padding: 40px 20px;
+            background: linear-gradient(135deg, rgba(231, 76, 60, 0.08) 0%, rgba(192, 57, 43, 0.06) 25%, rgba(231, 76, 60, 0.05) 50%, rgba(236, 112, 99, 0.04) 75%, rgba(245, 183, 177, 0.03) 100%);
+            border-radius: 12px; box-shadow: 0 8px 32px rgba(231, 76, 60, 0.1);
+        }
+        /* Header Section */
+        .portfolio-header {
+            position: relative;
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            padding-top: 38px;
+            border-bottom: 3px solid #e74c3c;
+        }
+
+        .portfolio-images {
+            /* Contenitore per logo, non più necessario con absolute */
+        }
+
+        .portfolio-logo {
+            width: 75px;
+            height: 75px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid #e74c3c;
+            position: absolute;
+            top: -11px;
+            left: 114px;
+            z-index: 10;
+        }
+
+        .portfolio-photo {
+            width: 100px;
+            height: 130px;
+            border-radius: 8px;
+            object-fit: cover;
+            border: 2px solid #e74c3c;
+            box-shadow: 0 4px 12px rgba(231, 76, 60, 0.2);
+            position: absolute;
+            top: -11px;
+            right: 46px;
+            z-index: 10;
+        }
+
+        .portfolio-title-section {
+            margin-left: 0px;
+            margin-top: 0px;
+            padding-right: 170px;
+        }
+
+        .section-logo {
+            width: 35px;
+            height: 35px;
+            border-radius: 3px;
+            object-fit: cover;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
+        .portfolio-main-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #000000;
+            margin-bottom: 5px;
+            letter-spacing: 1px;
+        }
+
+        .portfolio-subtitle {
+            font-size: 18px;
+            font-weight: 600;
+            color: #000000;
+            margin-bottom: 10px;
+        }
+
+        .portfolio-description {
+            font-size: 16px;
+            color: #495057;
+            margin-bottom: 15px;
+        }
+
+        .contact-info {
+            font-size: 14px;
+            color: #6c757d;
+            white-space: nowrap;
+        }
+        .portfolio-section {
+            margin-bottom: 35px; padding-left: 20px; border-left: 3px solid #e74c3c;
+        }
+        .section-title {
+            font-size: 22px; font-weight: 700; color: #2c3e50;
+            margin-bottom: 15px; display: flex; align-items: center;
+        }
+        .subsection-title {
+            font-size: 19px; font-weight: 600; color: #2c3e50;
+            margin-bottom: 15px; display: flex; align-items: center;
+        }
+        .section-content {
+            font-size: 15px; line-height: 1.7; color: #495057; margin-bottom: 15px;
+        }
+        .section-content strong { color: #2c3e50; }
+        .projects-grid {
+            display: grid; grid-template-columns: 1fr; gap: 20px; margin: 20px 0;
+        }
+        .project-card {
+            background: rgba(255, 255, 255, 0.7); padding: 20px;
+            border-radius: 8px; border-left: 4px solid #e74c3c;
+        }
+        .project-title {
+            font-size: 17px; font-weight: 600; color: #2c3e50; margin-bottom: 10px;
+        }
+        .project-details {
+            font-size: 14px; line-height: 1.6; color: #495057;
+        }
+        .project-details strong { color: #2c3e50; }
+        .portfolio-list {
+            list-style: none; padding: 0; margin: 15px 0;
+        }
+        .portfolio-list li {
+            padding: 8px 0; padding-left: 25px; position: relative;
+            font-size: 14px; line-height: 1.6; color: #495057;
+        }
+        .portfolio-list li::before {
+            content: '✓'; color: #e74c3c; position: absolute;
+            left: 0; font-weight: bold; font-size: 16px;
+        }
+        /* Responsive */
+        @media (max-width: 768px) {
+            .portfolio-header {
+                flex-direction: column;
+                text-align: center;
+                gap: 20px;
+            }
+
+            .portfolio-logo {
+                width: 80px;
+                height: 80px;
+            }
+
+            .portfolio-photo {
+                width: 120px;
+                height: 150px;
+            }
+
+            .portfolio-main-title {
+                font-size: 24px;
+            }
+
+            .portfolio-subtitle {
+                font-size: 16px;
+            }
+
+            .portfolio-description {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="portfolio-container">
+        <div class="portfolio-header">
+            <div class="portfolio-title-section">
+                <h1 class="portfolio-main-title">MASSIMO GABELLONE</h1>
+                <h2 class="portfolio-subtitle">SERVIZI PROFESSIONALI PER MUSICISTI</h2>
+                <p class="portfolio-description">Digital Marketing • Business Development • Career Coaching</p>
+                <div class="contact-info">
+                    <p><strong>Email:</strong> <a href="mailto:info@massimogabellone.com" style="color: #e74c3c; text-decoration: none; font-weight: 500;">info@massimogabellone.com</a> | <strong>Tel:</strong> +355 69 288 2052 | <strong>Web:</strong> <a href="https://www.massimogabellone.com" target="_blank" rel="noopener noreferrer" style="color: #e74c3c; text-decoration: none; font-weight: 500;">www.massimogabellone.com</a></p>
+                </div>
+                <img src="static/images/foto.jpg" alt="Massimo Gabellone" class="portfolio-photo">
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Profilo" class="section-logo">
+                Chi Sono e Perché Posso Aiutarti
+            </h3>
+            <div class="section-content">
+                <p><strong>Pianista concertista professionista e Artista Steinway & Sons</strong> con <strong>oltre 50 anni di esperienza come musicista attivo</strong> (iniziato a 7 anni, laureato Conservatorio con 10/10 - unico con massimo nella sessione) e <strong>30 anni di esperienza nel mercato musicale come organizzatore/produttore</strong>. NON sono un agente tradizionale con percentuale - sono un <strong>formatore e consulente</strong> che ti insegna a diventare <strong>autonomo, competitivo e visibile</strong> nel mercato musicale contemporaneo.</p>
+                
+                <p style="margin-top: 15px;"><strong>La mia differenza:</strong> Conosco il mercato da entrambi i lati - come <strong>musicista professionista che suona</strong> (Artista Steinway & Sons, formazione d'élite alla Hochschule für Musik Amburgo - 10 selezionati su 112 candidati, masterclass con allievi di Michelangeli e Arrau) e come <strong>organizzatore/produttore che vende concerti</strong> (1.300+ concerti organizzati in 8 paesi europei, 35.000 musicisti ingaggiati, €14M gestiti, 120+ enti collaboratori). Questa doppia prospettiva mi permette di insegnarti strategie che <strong>funzionano realmente</strong> nel mercato contemporaneo, non teorie astratte.</p>
+
+                <p style="margin-top: 15px;"><strong>Il mio approccio:</strong> Ti rendo autonomo fornendoti competenze, strumenti e strategie concrete. Non sostituisco la tua capacità decisionale - la <strong>potenziamento</strong>.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Track Record" class="section-logo">
+                Track Record - Perché Puoi Fidarti
+            </h3>
+            
+            <div class="section-content">
+                <p><strong>Esperienza documentata su entrambi i lati del mercato musicale:</strong></p>
+            </div>
+
+            <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+                
+                <div class="project-card">
+                    <h4 class="project-title">Come Musicista Professionista</h4>
+                    <div class="project-details">
+                        <strong>50+ anni attività concertistica</strong><br>
+                        • <strong>Artista Steinway & Sons</strong> (riconoscimento ottenuto tramite ascolto registrazioni live)<br>
+                        • Conservatorio G. Tartini: 10/10 (unico con massimo nella sessione)<br>
+                        • Hochschule für Musik Amburgo: 10 selezionati su 112 candidati<br>
+                        • Masterclass con allievi di Michelangeli, Arrau, Liszt<br>
+                        • Concerti in Italia, Germania, Slovenia<br>
+                        • Repertorio Barocco-Novecento storico<br><br>
+                        <strong>Conosco le sfide del musicista sul palco</strong>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Come Organizzatore/Produttore</h4>
+                    <div class="project-details">
+                        <strong>30 anni esperienza vendita concerti</strong><br>
+                        • <strong>1.300+ concerti</strong> organizzati e venduti in 8 paesi europei<br>
+                        • <strong>35.000 musicisti</strong> ingaggiati (contratti gestiti)<br>
+                        • <strong>€14 milioni</strong> gestiti con rendicontazione certificata<br>
+                        • <strong>50 concerti/anno venduti</strong> per Orchestra Mitteleuropa<br>
+                        • <strong>120+ enti collaboratori</strong> costruiti (Regioni, Province, Comuni)<br>
+                        • Partnership UNESCO, UNOPS, UNDP, CEI<br><br>
+                        <strong>Conosco come vendere concerti e costruire carriere sostenibili</strong>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Competenze Digitali e Business</h4>
+                    <div class="project-details">
+                        • Website creation per 4 scuole di musica<br>
+                        • Social media strategy e comunicazione digitale<br>
+                        • Europrogettazione/Fondi Nazionali e altri Fondi Internazionali: €14M fondi multi-fonte gestiti<br>
+                        • Business model orchestra sinfonica sostenibile (€1,1M/anno)<br>
+                        • Network building: 120+ enti in 8 paesi europei<br>
+                        • AI tools per ottimizzazione workflow<br>
+                        <br>
+                        <strong>Conosco gli strumenti digitali che funzionano per i musicisti</strong>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Risultati Concreti Replicabili</h4>
+                    <div class="project-details">
+                        <strong>Modelli testati in ambito organizzativo che insegno:</strong><br>
+                        • Festival 15 anni continuità (€700k/anno budget)<br>
+                        • Orchestra sostenibile: entrate commerciali coprono 100% staff<br>
+                        • Turnaround Istituto Vivaldi: da 24 a 140 allievi<br>
+                        • Concerti corporate (Città Fiera Udine)<br>
+                        • Pricing trasparente e professionale<br>
+                        • Zero contenziosi in 30 anni di attività<br>
+                        <br>
+                        <strong>Conosco i modelli che generano risultati misurabili</strong>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="section-content" style="margin-top: 20px;">
+                <p style="font-style: italic; color: #495057; font-size: 15px;">
+                    <strong>La mia differenza:</strong> Non ti insegno teoria da chi non suona. Ti insegno strategie testate sul campo da chi ha suonato per 50 anni e venduto 1.300 concerti.
+                </p>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Esperienza" class="section-logo">
+                Esperienza e Numeri
+            </h3>
+            
+            <div class="section-content">
+                <p><strong>Esperienza documentata</strong> nelle vendite, produzione e gestione di concerti e progetti musicali di alto livello:</p>
+                <ul class="portfolio-list">
+                    <li><strong>1.300+ concerti organizzati e venduti</strong> in 8 paesi europei: Italia, Austria, Slovenia, Croazia, Serbia, Bosnia-Erzegovina, Montenegro, Albania (1998-2013)</li>
+                    <li><strong>50 concerti/anno venduti</strong> per Orchestra Mitteleuropa con 47 orchestrali stabili su 114 giornate annuali di lavoro effettive</li>
+                    <li><strong>Budget gestito:</strong> 1,1 milioni €/anno per orchestra sinfonica con sostenibilità economica dimostrata</li>
+                    <li><strong>120+ enti collaboratori costruiti</strong> - Regione FVG, 4 Province, 45 Comuni, enti privati, organismi internazionali</li>
+                    <li><strong>Partnership prestigiose:</strong> Venice Biennale, MOMA New York, Ljubljana Festival, Mittelfest, Confindustria</li>
+                    <li><strong>Solisti internazionali:</strong> Stefan Milenkovich, Philippe Entremont, Evgeni Koroliov, Truls Mørk, Andrea Bacchetti, Daniela Barcellona, Karl Leister, Alain Meunier, Roberto Fabbriciani, e tanti altri</li>
+                    <li><strong>18 Progetti su Fondi Internazionali ed Europei vinti e implementati:</strong> INTERREG, FSE, CEI</li>
+                    <li><strong>Formazione documentata:</strong> FSE Friuli Venezia Giulia 1998/1999 - Formazione 44 professori d'orchestra</li>
+                </ul>
+
+                <p style="margin-top: 15px; font-style: italic;"><strong>Conosco entrambi i lati del tavolo:</strong> come musicista professionista che suona e come organizzatore/produttore che vende concerti. Questa doppia prospettiva mi permette di insegnarti strategie che funzionano realmente nel mercato contemporaneo.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Opportunità" class="section-logo">
+                Il Mercato Musicale è Cambiato - Le Opportunità Sono Aumentate
+            </h3>
+            <div class="section-content">
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Il Contesto Attuale</h4>
+                <p>Il mercato musicale si è <strong>evoluto radicalmente</strong> negli ultimi anni, aprendo <strong>nuove opportunità straordinarie</strong> per i musicisti che sanno come coglierle. Il mondo digitale ha democratizzato la visibilità e moltiplicato i canali per farsi conoscere e creare opportunità di lavoro.</p>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">Nuove Opportunità Disponibili</h4>
+                <ul class="portfolio-list">
+                    <li><strong>Presenza digitale strategica:</strong> Website professionale, social media e visibilità online per raggiungere pubblici e organizzatori globalmente</li>
+                    <li><strong>Mercati alternativi in crescita:</strong> Eventi corporate, hotel luxury, residenze artistiche, location storiche - settori in forte espansione oltre i teatri tradizionali</li>
+                    <li><strong>Strumenti di comunicazione moderni:</strong> CV digitali, EPK, portfolio multimediali che comunicano efficacemente il tuo valore artistico</li>
+                    <li><strong>Autonomia professionale:</strong> Possibilità di gestire direttamente la propria carriera con strumenti accessibili e strategie chiare</li>
+                    <li><strong>Network globali accessibili:</strong> LinkedIn e piattaforme digitali permettono di costruire reti internazionali rapidamente</li>
+                    <li><strong>Finanziamenti pubblici:</strong> Fondi europei e locali disponibili per progetti musicali innovativi</li>
+                </ul>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">La Sfida</h4>
+                <p>Il conservatorio e la formazione musicale tradizionale insegnano l'eccellenza artistica, ma <strong>non preparano a navigare questo nuovo ecosistema professionale</strong>. Servono competenze nuove: digital marketing, business development, comunicazione strategica, diversificazione mercati.</p>
+
+                <h4 style="color: #2c3e50; font-weight: 600; margin: 20px 0 10px 0;">La Mia Proposta</h4>
+                <p><strong>Ti insegno a cogliere queste opportunità:</strong> costruire presenza digitale professionale, comunicare il tuo valore, diversificare mercati e repertori, accedere a fondi e progetti, gestire autonomamente la tua carriera con strumenti contemporanei. Non ti sostituisco - ti <strong>rendo autonomo e competitivo</strong>.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Servizi" class="section-logo">
+                I Miei Servizi per Musicisti Professionisti - Come Posso Aiutarti
+            </h3>
+            
+            <div class="section-content">
+                <p>Offro <strong>4 aree di servizio integrate</strong> per trasformare musicisti di talento in professionisti autonomi e competitivi. Non sostituisco la tua capacità decisionale – la <strong>potenziamo</strong> con competenze concrete, strumenti operativi e strategie testate sul campo, <strong>pensati esattamente per musicisti</strong>.</p>
+                
+                <p style="margin-top: 15px;">Ogni servizio può essere fruito singolarmente o combinato in un percorso personalizzato sulle tue esigenze specifiche. L'obiettivo è sempre lo stesso: <strong>renderti autonomo</strong> nel gestire e sviluppare la tua carriera musicale nel mercato contemporaneo.</p>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h4 class="subsection-title">
+                1. Personal Branding & Digital Marketing
+            </h4>
+            
+            <div class="section-content">
+                <p>Costruzione di una <strong>presenza digitale professionale e strategica</strong> che ti rende visibile, credibile e memorabile nel mercato contemporaneo.</p>
+            </div>
+
+            <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="project-card">
+                    <h4 class="project-title">Website Musicista Professionale</h4>
+                    <div class="project-details">
+                        <strong>COSTO CREAZIONE WEBSITE: €1.000</strong><br><br>
+                        
+                        <strong>Cosa include il servizio di creazione:</strong><br>
+                        • 5-6 pagine complete (Bio/CV, Repertorio, Media/Video, Foto, Recensioni, Contatti)<br>
+                        • 2-3 lingue (italiano + inglese/altra lingua target)<br>
+                        • Design custom personalizzato (no template banali)<br>
+                        • Responsive mobile professionale<br>
+                        • 2 revisioni incluse<br>
+                        • Formazione gestione autonoma (1 ora)<br>
+                        • Consulenza strategica su posizionamento<br>
+                        • Consegna: 7-10 giorni lavorativi<br><br>
+                        
+                        <strong>COSTI TECNICI SEPARATI (non inclusi nei €1.000):</strong><br>
+                        • Dominio personalizzato: €15/anno (1° anno a tuo carico)<br>
+                        • Hosting professionale: €100/anno (1° anno a tuo carico)<br>
+                        • Totale costi tecnici 1° anno: €115<br><br>
+                        
+                        <strong>GESTIONE FUTURA (opzionale, non inclusa):</strong><br>
+                        • Rinnovo dominio: €15/anno (dal 2° anno - gestione diretta cliente)<br>
+                        • Rinnovo hosting: €100/anno (dal 2° anno - gestione diretta cliente)<br>
+                        • Manutenzione tecnica: €120-150/anno (opzionale - affidata a terzi esterni)<br>
+                        • Aggiornamenti contenuti: quotazione separata su richiesta
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Social Media, CV e Visibilità Digitale</h4>
+                    <div class="project-details">
+                        <strong>Strategia Social Media:</strong><br>
+                        • Audit e ottimizzazione profili (LinkedIn, Instagram, Facebook, YouTube)<br>
+                        • Strategia contenuti personalizzata e piano editoriale 3 mesi<br>
+                        • Formazione completa per gestione autonoma<br>
+                        • Coordinamento con social media manager professionisti (su richiesta)<br>
+                        • Templates e best practices<br><br>
+                        
+                        <strong>CV e Materiali Promozionali:</strong><br>
+                        • CV musicale professionale formato europeo/internazionale<br>
+                        • Electronic Press Kit (EPK) digitale<br>
+                        • Bio artistica (breve/media/lunga)<br>
+                        • Coordinamento materiali grafici con designer (su richiesta)<br>
+                        • Portfolio digitale base<br><br>
+                        
+                        <strong>Visibilità Online:</strong><br>
+                        • SEO base: ottimizzazione contenuti e presenza online<br>
+                        • Setup piattaforme musicali (Spotify, YouTube)<br>
+                        • Google My Business<br>
+                        • Networking digitale strategico
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h4 class="subsection-title">
+                2. Business Development Musicale
+            </h4>
+            
+            <div class="section-content">
+                <p>Sviluppo della tua <strong>carriera come business sostenibile</strong>, andando oltre i teatri tradizionali e creando flussi di entrata diversificati.</p>
+            </div>
+
+            <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="project-card">
+                    <h4 class="project-title">Diversificazione Mercati</h4>
+                    <div class="project-details">
+                        • Festival e rassegne culturali<br>
+                        • Eventi corporate e aziendali<br>
+                        • Hotel luxury e resort<br>
+                        • Crociere di lusso<br>
+                        • Matrimoni VIP e eventi privati<br>
+                        • Residenze artistiche<br>
+                        • Location storiche (castelli, ville, chiese)<br>
+                        • Progetti territoriali con Comuni/Regioni
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Strategie Vendita e Pricing</h4>
+                    <div class="project-details">
+                        • Pricing strategico cachet<br>
+                        • Pacchettizzazione offerte<br>
+                        • Vendita diretta vs intermediazione<br>
+                        • Negoziazione contratti professionali<br>
+                        • Gestione clienti e follow-up<br>
+                        • Preventivazione professionale
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Network Building</h4>
+                    <div class="project-details">
+                        • Costruzione rete contatti strategici<br>
+                        • Partnership con enti pubblici locali<br>
+                        • Collaborazioni con altri musicisti<br>
+                        • Relazioni con organizzatori/teatri<br>
+                        • Networking su LinkedIn<br>
+                        • Partecipazione eventi settore
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Autonomia Professionale</h4>
+                    <div class="project-details">
+                        • Come vendere senza agente<br>
+                        • Strumenti di auto-gestione carriera<br>
+                        • CRM semplice per musicisti<br>
+                        • Templates contratti e preventivi<br>
+                        • Gestione amministrativa base<br>
+                        • Pianificazione stagione artistica
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Accesso Finanziamenti Europei</h4>
+                    <div class="project-details">
+                        • Supporto accesso fondi pubblici e europei per progetti culturali<br>
+                        • Creative Europe, INTERREG, fondi regionali/locali<br>
+                        • Consulenza su bandi compatibili con progetti musicali<br>
+                        • Track record: €14M fondi multi-fonte gestiti<br>
+                        • Strategie fundraising per musicisti professionisti
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h4 class="subsection-title">
+                3. Strategie Repertorio Vincenti
+            </h4>
+            
+            <div class="section-content">
+                <p>Il repertorio è sempre <strong>eccellenza artistica</strong>, ma diventa <strong>strumento strategico potentissimo</strong> quando lo scegli e lo presenti creando <strong>connessioni culturali, territoriali, politiche</strong> con il contesto specifico. Ti insegno a costruire progetti che vincono perché hanno senso.</p>
+            </div>
+
+            <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="project-card">
+                    <h4 class="project-title">Repertorio Strategico Contestualizzato</h4>
+                    <div class="project-details">
+                        <strong>Principio:</strong> Eccellenza artistica sempre, ma scelta opere che creano <strong>narrativa forte</strong> per enti/sponsor/territori.<br><br>
+                        
+                        <strong>Alcuni esempi:</strong><br>
+                        • <strong>"La Concordia de' Pianeti" (Caldara):</strong> Barocco, "Ode al buon governo" - provocatorio oggi<br>
+                        • <strong>"Manfred" (Schumann/Byron):</strong> Eroe libertà + legami territoriali Byron (Albania, Grecia, Italia)<br>
+                        • <strong>Living composers locali:</strong> Identità culturale contemporanea<br>
+                        • <strong>Compositrici dimenticate (Fanny Mendelssohn, Clara Schumann):</strong> Inclusione/gender equality - narrativa forte per fondi internazionali<br>
+                        • <strong>Šostakovič:</strong> Temi libertà/oppressione - attuale con situazioni belligeranti contemporanee
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Repertorio come Asset Commerciale</h4>
+                    <div class="project-details">
+                        <strong>Strategie di ampliamento pubblico:</strong><br>
+                        • Trasversale: Beatles/Sinatra arrangiati - più pubblico, eccellenza mantenuta<br>
+                        • Tematico territoriale: legami storici/culturali location<br>
+                        • Interdisciplinare: format innovativi cultura+territorio<br>
+                        • Site-specific: concerti immersivi in luoghi storici
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Progetti Territoriali e Fondi Pubblici</h4>
+                    <div class="project-details">
+                        • Valorizzazione patrimoni locali (castelli, ville, piazze)<br>
+                        • Partnership con Comuni/Regioni/enti territoriali<br>
+                        • Accesso fondi pubblici locali e regionali<br>
+                        • Eventi di impatto territoriale<br>
+                        • Repertori tematici per contesti specifici<br>
+                        • Adattamento a budget/logistica locale
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Collaborazioni e Format Innovativi</h4>
+                    <div class="project-details">
+                        • Ensemble e formazioni variabili<br>
+                        • Compositori contemporanei: commissioni e prime<br>
+                        • Collaborazioni artisti altri settori<br>
+                        • Format multidisciplinari (musica+teatro+danza)<br>
+                        • Progetti interdisciplinari innovativi<br>
+                        • Network con altri professionisti
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-section">
+            <h4 class="subsection-title">
+                4. Formazione e Coaching Personalizzato
+            </h4>
+            
+            <div class="section-content">
+                <p>Trasferimento di competenze e metodologie attraverso <strong>processi formativi pratici</strong>.</p>
+            </div>
+
+            <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+                <div class="project-card">
+                    <h4 class="project-title">Workshop di Gruppo</h4>
+                    <div class="project-details">
+                        <strong>Temi:</strong><br>
+                        • Digital marketing per musicisti<br>
+                        • Come creare il tuo website professionale<br>
+                        • CV e portfolio moderni<br>
+                        • Social media strategico<br>
+                        • Business development: vendere oltre i teatri<br>
+                        • Pricing e negoziazione cachet<br><br>
+                        <strong>Formato:</strong> Sessioni online 3-4 ore con piccoli gruppi (10-15 partecipanti) per garantire interazione diretta. Disponibile anche per workshop in presenza su richiesta.
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Coaching Individuale 1-on-1</h4>
+                    <div class="project-details">
+                        <strong>Personalizzato su tue esigenze:</strong><br>
+                        • Analisi situazione attuale carriera<br>
+                        • Definizione obiettivi strategici<br>
+                        • Piano d'azione concreto personalizzato<br>
+                        • Supporto implementazione<br>
+                        • Follow-up e accountability<br><br>
+                        <strong>Formato:</strong> Sessioni online 60-90 minuti. Disponibile anche in presenza su richiesta.
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <h4 class="project-title">Mentoring Continuativo</h4>
+                    <div class="project-details">
+                        • Supporto long-term carriera<br>
+                        • Consulenza su decisioni strategiche<br>
+                        • Network sharing selettivo<br>
+                        • Introduzioni a contatti chiave<br>
+                        • Revisione materiali promo<br>
+                        • Accountability partner
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Articoli per Musicisti Professionisti -->
+        <div class="portfolio-section">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Articoli" class="section-logo">
+                Articoli per Musicisti Professionisti
+            </h3>
+            
+            <p class="section-content">
+                Risorse e riflessioni per musicisti che vogliono sviluppare la loro carriera con consapevolezza artistica, tecnica e strategica.
+            </p>
+
+            <div class="projects-grid" style="grid-template-columns: 1fr;">
+                
+                <!-- Sottosezione: Tecnica e Interpretazione -->
+                <div style="margin-bottom: 30px;">
+                    <h4 style="color: #2c3e50; font-weight: 600; margin-bottom: 15px; font-size: 18px; border-bottom: 2px solid #9b59b6; padding-bottom: 8px;">
+                        Tecnica e Interpretazione Musicale
+                    </h4>
+                    
+                    <div class="project-card" style="border-left: 4px solid #9b59b6; margin-bottom: 15px;">
+                        <h4 class="project-title">Musica per Pianoforte e Libertà di Espressione</h4>
+                        <div class="project-details" style="margin-bottom: 10px;">
+                            <strong>Pubblicato:</strong> LinkedIn • Agosto 2025<br>
+                            <strong>Temi:</strong> Interpretazione • Filologia • Libertà artistica • Studio dello spartito<br>
+                            <strong>Engagement:</strong> 3 reactions
+                        </div>
+                        <p style="font-style: italic; margin-bottom: 10px; font-size: 14px;">
+                            "La libertà di espressione autentica nasce dallo studio rigoroso delle indicazioni del compositore. Puoi scegliere di ignorarle, ma prima devi conoscerle."
+                        </p>
+                        <ul style="margin: 8px 0; padding-left: 20px; font-size: 13px;">
+                            <li>Studio rigoroso delle indicazioni del compositore come base per libertà autentica</li>
+                            <li>Critica ai cliché interpretativi e false credenze</li>
+                            <li>Analisi Beethoven Appassionata e Chopin Ballata n.4</li>
+                            <li>"L'arte non è anarchia; è un tempio straordinario"</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-size: 13px;">
+                            <a href="https://www.linkedin.com/pulse/international-consultant-music-art-culturecultural-massimo-gabellone-eos1e/" target="_blank" style="color: #2c3e50; font-weight: 600;">Leggi l'articolo</a>
+                        </p>
+                    </div>
+
+                    <div class="project-card" style="border-left: 4px solid #9b59b6;">
+                        <h4 class="project-title">Chopin e l'Orchestra: Una Visione Innovativa</h4>
+                        <div class="project-details" style="margin-bottom: 10px;">
+                            <strong>Pubblicato:</strong> LinkedIn • Agosto 2025<br>
+                            <strong>Temi:</strong> Analisi musicologica • Approccio innovativo • Scoperta nuove possibilità<br>
+                            <strong>Engagement:</strong> 4 reactions
+                        </div>
+                        <p style="font-style: italic; margin-bottom: 10px; font-size: 14px;">
+                            "L'arte non è mai completa; evolve con ogni nuova intuizione. A volte mondi imprevisti diventano visibili se guardiamo oltre l'orizzonte. Immaginare l'orchestra come lente interpretativa nella musica di Chopin rivela nuove possibilità sonore, indicando prospettive inedite anche per altri compositori."
+                        </p>
+                        <ul style="margin: 8px 0; padding-left: 20px; font-size: 13px;">
+                            <li>Concezione orchestrale nascosta nella musica di Chopin</li>
+                            <li>Collegamenti Bach-Mozart-Beethoven-Chopin</li>
+                            <li>Nuove possibilità interpretative scoprendo il "pensiero orchestrale"</li>
+                            <li>"L'arte è mai completa; evolve con ogni nuova intuizione"</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-size: 13px;">
+                            <a href="https://www.linkedin.com/pulse/international-consultant-music-art-culture-massimo-gabellone-lrvnf/" target="_blank" style="color: #2c3e50; font-weight: 600;">Leggi l'articolo</a>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Sottosezione: Strategie di Carriera -->
+                <div>
+                    <h4 style="color: #2c3e50; font-weight: 600; margin-bottom: 15px; font-size: 18px; border-bottom: 2px solid #9b59b6; padding-bottom: 8px;">
+                        Strategie di Carriera Musicale
+                    </h4>
+                    
+                    <div class="project-card" style="border-left: 4px solid #9b59b6; margin-bottom: 15px;">
+                        <h4 class="project-title">La Crisi della Musica Classica: Come Costruire una Carriera Sostenibile</h4>
+                        <div class="project-details" style="margin-bottom: 10px;">
+                            <strong>Pubblicato:</strong> LinkedIn • Settembre 2024<br>
+                            <strong>Temi:</strong> Mercato musicale • Strategie pratiche • Comprensione stakeholder<br>
+                            <strong>Engagement:</strong> 5 reactions
+                        </div>
+                        <p style="font-style: italic; margin-bottom: 10px; font-size: 14px;">
+                            "Le istituzioni vogliono investire in cultura, ma non pagano per concerti con pubblico scarso. Dobbiamo offrire proposte coerenti con lo sviluppo territoriale, comunicando in modo chiaro e professionale."
+                        </p>
+                        <ul style="margin: 8px 0; padding-left: 20px; font-size: 13px;">
+                            <li>Comprendere i bisogni delle istituzioni che finanziano</li>
+                            <li>Creare proposte coerenti con sviluppo territoriale</li>
+                            <li>Progetti multidisciplinari per diversificare fonti di reddito</li>
+                            <li>Comunicazione professionale ed efficace</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-size: 13px;">
+                            <a href="https://www.linkedin.com/posts/massimogabellone_generally-speaking-i-see-that-the-music-activity-7338521035928985602-ckYF" target="_blank" style="color: #2c3e50; font-weight: 600;">Leggi l'articolo</a>
+                        </p>
+                    </div>
+
+                    <div class="project-card" style="border-left: 4px solid #9b59b6;">
+                        <h4 class="project-title">Musica e Territori: Opportunità di Lavoro nel Turismo Culturale</h4>
+                        <div class="project-details" style="margin-bottom: 10px;">
+                            <strong>Pubblicato:</strong> LinkedIn • Luglio 2025<br>
+                            <strong>Temi:</strong> Opportunità concrete • Turismo culturale • Diversificazione lavoro<br>
+                            <strong>Engagement:</strong> 6 reactions • 2 commenti
+                        </div>
+                        <p style="font-style: italic; margin-bottom: 10px; font-size: 14px;">
+                            "La musica classica come asset turistico: concerti in location storiche attraggono visitatori, valorizzano territori, creano lavoro per musicisti. Il turismo è pilastro dell'economia reale—il nostro ruolo è cruciale."
+                        </p>
+                        <ul style="margin: 8px 0; padding-left: 20px; font-size: 13px;">
+                            <li>Concerti in location turistiche atipiche (castelli, chiese, parchi)</li>
+                            <li>Collaborazioni con enti turistici locali</li>
+                            <li>Festival territoriali e turismo musicale</li>
+                            <li>Linguaggio universale che attrae visitatori internazionali</li>
+                        </ul>
+                        <p style="margin-top: 10px; font-size: 13px;">
+                            <a href="https://www.linkedin.com/pulse/international-consultant-music-art-culture-cultural-massimo-gabellone-uxb7e/" target="_blank" style="color: #2c3e50; font-weight: 600;">Leggi l'articolo</a>
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Cross-Reference Portfolio -->
+        <div class="portfolio-section" style="background: #f8f9fa; padding: 30px; border-left: 4px solid #2c3e50; margin: 40px 0;">
+            <h3 class="section-title">
+                <img src="static/images/logo.jpg" alt="Portfolio" class="section-logo">
+                Visione d'Insieme delle Competenze
+            </h3>
+            <p style="margin-bottom: 15px; font-size: 16px; line-height: 1.6;">Questo portfolio si concentra sui <strong>servizi professionali per musicisti</strong>. Per una comprensione completa delle mie competenze multidisciplinari e della mia esperienza trentennale, esplora anche:</p>
+            <ul style="margin-top: 15px; line-height: 2; list-style: none; padding-left: 0;">
+                <li style="margin-bottom: 10px;"><span style="display: inline-block; width: 14px; height: 14px; border: 1.5px solid #d4af37; border-radius: 2px; margin-right: 8px; padding: 1px; vertical-align: middle;"><img src="static/images/logo.jpg" style="width: 100%; height: 100%; display: block;"></span><a href="portfolio_cultura_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio Cultura</a> — Direzione artistica, festival internazionali, democratizzazione culturale</li>
+                <li style="margin-bottom: 10px;"><span style="display: inline-block; width: 14px; height: 14px; border: 1.5px solid #d4af37; border-radius: 2px; margin-right: 8px; padding: 1px; vertical-align: middle;"><img src="static/images/logo.jpg" style="width: 100%; height: 100%; display: block;"></span><a href="portfolio_cultura_business_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio Business</a> — Sostenibilità economica, ROI culturale, business model innovativi</li>
+                <li style="margin-bottom: 10px;"><span style="display: inline-block; width: 14px; height: 14px; border: 1.5px solid #d4af37; border-radius: 2px; margin-right: 8px; padding: 1px; vertical-align: middle;"><img src="static/images/logo.jpg" style="width: 100%; height: 100%; display: block;"></span><a href="portfolio_fondi_internazionali_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio Fondi Internazionali</a> — Europrogettazione, grant writing, fundraising multi-fonte (€14M gestiti)</li>
+                <li style="margin-bottom: 10px;"><span style="display: inline-block; width: 14px; height: 14px; border: 1.5px solid #d4af37; border-radius: 2px; margin-right: 8px; padding: 1px; vertical-align: middle;"><img src="static/images/logo.jpg" style="width: 100%; height: 100%; display: block;"></span><a href="portfolio_universita_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio Università</a> — Capacity building accademico, progetti INTERREG, formazione universitaria</li>
+                <li style="margin-bottom: 10px;"><span style="display: inline-block; width: 14px; height: 14px; border: 1.5px solid #d4af37; border-radius: 2px; margin-right: 8px; padding: 1px; vertical-align: middle;"><img src="static/images/logo.jpg" style="width: 100%; height: 100%; display: block;"></span><a href="portfolio_ngo_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio NGO</a> — Cooperazione decentrata, peacebuilding, sviluppo territoriale community-based</li>
+                <li style="margin-bottom: 10px;"><span style="display: inline-block; width: 14px; height: 14px; border: 1.5px solid #d4af37; border-radius: 2px; margin-right: 8px; padding: 1px; vertical-align: middle;"><img src="static/images/logo.jpg" style="width: 100%; height: 100%; display: block;"></span><a href="portfolio_pianista_preview_it.html" style="color: #2c3e50; font-weight: 600; text-decoration: none; border-bottom: 2px solid #3498db; padding-bottom: 2px; transition: all 0.3s;">Portfolio Pianista</a> — Concertismo professionale, repertorio, performance internazionali</li>
+            </ul>
+        </div>
+
+        <div class="portfolio-section" style="background: linear-gradient(135deg, rgba(231, 76, 60, 0.08) 0%, rgba(192, 57, 43, 0.06) 50%); padding: 30px; border-left: 4px solid #e74c3c; margin: 40px 0 0 0; text-align: center;">
+            <h3 class="section-title" style="justify-content: center; margin-bottom: 20px;">
+                <img src="static/images/logo.jpg" alt="Contatti" class="section-logo">
+                Inizia il Tuo Percorso di Crescita Professionale
+            </h3>
+            
+            <div class="section-content" style="max-width: 600px; margin: 0 auto;">
+                <p style="font-size: 17px; line-height: 1.7; margin-bottom: 25px;">
+                    Costruiamo insieme una strategia concreta per renderti <strong>autonomo, visibile e competitivo</strong> nel mercato musicale contemporaneo.
+                </p>
+                
+                <p style="font-size: 16px; margin-bottom: 20px;">
+                    <strong>Consulenza conoscitiva gratuita 30 minuti</strong>
+                </p>
+
+                <p style="font-size: 15px; line-height: 1.8;">
+                    <strong>Email:</strong> <a href="mailto:info@massimogabellone.com" style="color: #e74c3c; text-decoration: none; font-weight: 600;">info@massimogabellone.com</a><br>
+                    <strong>Tel:</strong> <a href="tel:+355692882052" style="color: #e74c3c; text-decoration: none; font-weight: 600;">+355 69 288 2052</a><br>
+                    <strong>Web:</strong> <a href="https://www.massimogabellone.com" target="_blank" style="color: #e74c3c; text-decoration: none; font-weight: 600;">www.massimogabellone.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
